@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio — Cosmic Chaos Production</title>
+  <meta name="description" content="Studio créatif dual fondé par Théo Bouet. Marketing digital × production audiovisuelle. Pourquoi le chaos, comment on bosse, qui on est." />
+  <link rel="canonical" href="https://cosmicchaos.fr/about.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/cosmic.css" />
+  <style>html:not(.tbo-authed) body > *:not(#tbo-gate){visibility:hidden!important}html:not(.tbo-authed) body{overflow:hidden!important;background:#04020F}</style>
+  <script>if(sessionStorage.getItem('tbo_access_v1')==='granted')document.documentElement.classList.add('tbo-authed');</script>
+  <script src="assets/js/gate.js"></script>
+  <style>
+    .about-hero {
+      min-height: 90vh;
+      padding: 160px 60px 80px;
+      background: linear-gradient(135deg, #04020F 0%, #0a0626 50%, #0A0907 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .about-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 13% 17%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 41% 41%, #c4b8ff, transparent),
+        radial-gradient(1px 1px at 79% 53%, #80e8ff, transparent),
+        radial-gradient(1px 1px at 89% 19%, #fff, transparent);
+      opacity: 0.35;
+    }
+    .about-hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 50% 60% at 20% 50%, rgba(157, 92, 255, 0.18) 0%, transparent 60%); }
+    .about-hero > * { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; width: 100%; }
+    .about-tag { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--marketing-cyan); margin-bottom: 24px; }
+    .about-tag::before { content: '◆ '; }
+    .about-headline { font-family: var(--font-display); font-size: clamp(64px, 9vw, 168px); line-height: 0.9; letter-spacing: -0.02em; text-transform: uppercase; }
+    .about-headline .italic { font-family: var(--font-serif); font-style: italic; font-weight: 300; color: var(--marketing-purple-bright); text-transform: none; }
+
+    .story {
+      padding: 120px 60px;
+      background: #000;
+    }
+    .story-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; }
+    .story-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--marketing-cyan); }
+    .story-text p { font-size: 17px; line-height: 1.8; color: var(--ink-dim); margin-bottom: 24px; }
+    .story-text p strong { color: var(--ink); font-weight: 500; }
+    .story-text .pull {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 28px;
+      line-height: 1.4;
+      color: var(--marketing-purple-bright);
+      margin: 40px 0;
+      padding-left: 24px;
+      border-left: 2px solid var(--marketing-purple);
+    }
+
+    .values {
+      padding: 120px 60px;
+      background: linear-gradient(180deg, #000 0%, #0a0612 100%);
+    }
+    .values h2 {
+      font-family: var(--font-display);
+      font-size: clamp(48px, 7vw, 112px);
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    .values h2 .italic { font-family: var(--font-serif); font-style: italic; font-weight: 300; color: var(--cinema-warm); text-transform: none; }
+    .values-grid {
+      max-width: 1300px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--ink-faint);
+    }
+    .value-card {
+      background: #000;
+      padding: 60px 40px;
+      transition: background 0.5s ease;
+    }
+    .value-card:hover { background: #0a0626; }
+    .value-num {
+      font-family: var(--font-display); font-size: 88px; line-height: 0.8; letter-spacing: -0.05em;
+      color: transparent; -webkit-text-stroke: 1px rgba(157, 92, 255, 0.35);
+      margin-bottom: 32px;
+    }
+    .value-title { font-family: var(--font-display); font-size: 28px; letter-spacing: -0.005em; text-transform: uppercase; margin-bottom: 16px; }
+    .value-desc { font-size: 14px; line-height: 1.7; color: var(--ink-dim); }
+
+    .team {
+      padding: 120px 60px;
+      background: #000;
+    }
+    .team-intro { max-width: 1100px; margin: 0 auto 60px; text-align: center; }
+    .team-intro h2 {
+      font-family: var(--font-display); font-size: clamp(48px, 6vw, 96px);
+      letter-spacing: -0.02em; line-height: 0.9; text-transform: uppercase; margin-bottom: 24px;
+    }
+    .team-intro h2 .italic { font-family: var(--font-serif); font-style: italic; font-weight: 300; color: var(--marketing-cyan); text-transform: none; }
+    .team-intro p { color: var(--ink-dim); font-size: 16px; line-height: 1.7; max-width: 580px; margin: 0 auto; }
+
+    .founder {
+      max-width: 900px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: center;
+      padding: 48px;
+      border: 1px solid var(--ink-faint);
+      background: rgba(10, 6, 38, 0.3);
+    }
+    .founder-photo {
+      aspect-ratio: 4/5;
+      background: linear-gradient(135deg, #9D5CFF 0%, #00E0FF 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 88px; color: #04020F; letter-spacing: -0.05em;
+    }
+    .founder-name { font-family: var(--font-display); font-size: 48px; letter-spacing: -0.01em; text-transform: uppercase; margin-bottom: 8px; }
+    .founder-role { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--marketing-cyan); margin-bottom: 24px; }
+    .founder-bio p { font-size: 15px; line-height: 1.7; color: var(--ink-dim); margin-bottom: 12px; }
+
+    @media (max-width: 1024px) {
+      .story-grid { grid-template-columns: 1fr; gap: 32px; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .founder { grid-template-columns: 1fr; padding: 32px; }
+      .founder-photo { aspect-ratio: 16/10; }
+    }
+    @media (max-width: 768px) {
+      .about-hero, .story, .values, .team { padding-left: 24px; padding-right: 24px; }
+      .about-hero { padding-top: 120px; padding-bottom: 60px; }
+      .values-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="cursor-dot"></div>
+
+  <header class="nav scrolled" id="nav">
+    <a href="/" class="nav-logo">
+      <img class="nav-logo-mark" src="assets/img/brand/logo-ccp.svg" alt="" />
+      <span class="nav-logo-text">COSMIC CHAOS <span class="small">PRODUCTION</span></span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="marketing.html" class="nav-link">Marketing</a></li>
+        <li><a href="cinema.html" class="nav-link">Cinéma</a></li>
+        <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+        <li><a href="blog.html" class="nav-link">Journal</a></li>
+      </ul>
+    </nav>
+    <a href="projet.html" class="nav-cta">Devis</a>
+  </header>
+
+  <section class="about-hero">
+    <div class="about-tag">Studio · Founded MMXXVI</div>
+    <h1 class="about-headline">
+      Studio <span class="italic">dual.</span><br>
+      Méthode <span class="italic">chaos.</span>
+    </h1>
+  </section>
+
+  <section class="story">
+    <div class="story-grid">
+      <div>
+        <div class="story-label">— Notre histoire</div>
+      </div>
+      <div class="story-text">
+        <p>Cosmic Chaos Production est un studio créatif <strong>dual</strong> : marketing digital d'un côté, production audiovisuelle de l'autre. Pas deux pôles séparés. <strong>Une seule équipe</strong>, deux savoir-faire qui se nourrissent.</p>
+        <p>On a fondé le studio avec une conviction simple : un film qui marque, c'est aussi une stratégie. Une marque qui décolle, c'est aussi de la vidéo. Les deux mondes se parlent, et on les fait dialoguer.</p>
+        <div class="pull">"Le chaos, c'est ce qui se passe quand on arrête de suivre les recettes."</div>
+        <p>On bosse pour des marques qui veulent sortir du moule. Des projets qui demandent à la fois de la stratégie marketing et de la production visuelle de niveau cinéma. Drone, timelapse, films de marque, branding, sites web, campagnes — tout ce qui fait qu'une boîte se voit, se reconnaît, se retient.</p>
+        <p><strong>Petit studio, gros engagement.</strong> On répond vite, on fait propre, on rend des comptes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="values">
+    <h2>Trois principes,<br><span class="italic">zéro compromis.</span></h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-num">01</div>
+        <h3 class="value-title">Pas de modèle</h3>
+        <p class="value-desc">Chaque marque est unique. On refuse les recettes toutes faites. Stratégie sur mesure, films à votre image, design qui vous ressemble.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-num">02</div>
+        <h3 class="value-title">Vitesse réelle</h3>
+        <p class="value-desc">Devis sous 24h. Premier livrable rapide. On bouge vite parce que vous bougez vite. Petit studio = circuits courts.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-num">03</div>
+        <h3 class="value-title">Qualité cinéma</h3>
+        <p class="value-desc">4K minimum, drone homologué, post-prod soignée. Même pour les petites missions. Pas de "ça suffira", jamais.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="team">
+    <div class="team-intro">
+      <h2>L'équipe<br><span class="italic">derrière.</span></h2>
+      <p>Petit studio, gros calibres. On grandit selon les projets — avec une short-list de réalisateurs, monteurs, copywriters et devs en qui on a confiance.</p>
+    </div>
+
+    <div class="founder">
+      <div class="founder-photo">TB</div>
+      <div>
+        <h3 class="founder-name">Théo Bouet</h3>
+        <div class="founder-role">Fondateur · Direction créative</div>
+        <div class="founder-bio">
+          <p>Fondateur du studio. Marketing, code, vidéo, drone — touche-à-tout opérationnel qui passe du brief client à la livraison finale.</p>
+          <p>Background dual : digital, branding, prod vidéo. Conviction : un studio créatif ne devrait pas être obligé de choisir entre stratégie et exécution visuelle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-band">
+    <div class="contact-tag">— Discutons</div>
+    <h2 class="contact-headline">On se<br><span class="italic">rencontre ?</span></h2>
+    <a href="projet.html" class="contact-cta">Démarrer un projet <span class="arrow"></span></a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Cosmic Chaos</div>
+        <p class="footer-tagline">Studio créatif dual. Marketing digital cosmique × Production audiovisuelle cinématique.</p>
+      </div>
+      <div class="footer-col"><h4>Univers</h4><ul><li><a href="marketing.html">Marketing</a></li><li><a href="cinema.html">Cinéma</a></li><li><a href="realisations.html">Réalisations</a></li></ul></div>
+      <div class="footer-col"><h4>Studio</h4><ul><li><a href="about.html">À propos</a></li><li><a href="blog.html">Journal</a></li><li><a href="projet.html">Devis</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:contact@cosmicchaos.fr">contact@cosmicchaos.fr</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Cosmic Chaos Production</span><span>Marketing × Cinéma · France</span></div>
+  </footer>
+
+  <script src="assets/js/cosmic.js" defer></script>
+</body>
+</html>

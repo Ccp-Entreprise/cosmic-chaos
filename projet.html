@@ -3,253 +3,200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Soumettez votre projet à TBO Studio — Communication digitale et production visuelle pour les entreprises du BTP." />
-  <meta property="og:title" content="Démarrer un projet — TBO Studio" />
-  <meta property="og:description" content="Décrivez votre projet BTP et recevez un retour personnalisé sous 24h." />
-  <meta property="og:type" content="website" />
-  <title>Démarrer un projet — TBO Studio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#D4953C',
-            'primary-light': '#E0A94E',
-            'primary-dark': '#B8822F',
-            dark: '#0C0C0C',
-            card: '#161616',
-            light: '#F0ECE6',
-            warm: '#B8B0A4',
-            muted: '#706E6A',
-          },
-          fontFamily: {
-            display: ['DM Serif Display', 'serif'],
-            sans: ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <title>Démarrer un projet — Cosmic Chaos Production</title>
+  <meta name="description" content="Décrivez votre projet marketing ou audiovisuel. Retour personnalisé sous 24h, sans engagement." />
+  <link rel="canonical" href="https://cosmicchaos.fr/projet.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>html:not(.tbo-authed) body > *:not(#tbo-gate){visibility:hidden!important}html:not(.tbo-authed) body{overflow:hidden!important;background:#060606}</style>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/cosmic.css" />
+  <style>html:not(.tbo-authed) body > *:not(#tbo-gate){visibility:hidden!important}html:not(.tbo-authed) body{overflow:hidden!important;background:#04020F}</style>
   <script>if(sessionStorage.getItem('tbo_access_v1')==='granted')document.documentElement.classList.add('tbo-authed');</script>
   <script src="assets/js/gate.js"></script>
-</head>
-<body class="bg-dark text-light font-sans">
+  <style>
+    .project-page {
+      min-height: 100vh;
+      padding: 140px 60px 80px;
+      background: linear-gradient(135deg, #04020F 0%, #0a0626 50%, #0A0907 100%);
+      position: relative;
+    }
+    .project-page::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 13% 17%, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 41% 41%, #c4b8ff, transparent),
+        radial-gradient(1px 1px at 79% 53%, #80e8ff, transparent),
+        radial-gradient(1.5px 1.5px at 11% 91%, #fff, transparent),
+        radial-gradient(1px 1px at 89% 19%, #fff, transparent);
+      opacity: 0.25;
+      pointer-events: none;
+    }
+    .project-grid { position: relative; max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; }
+    .project-left h1 { font-family: var(--font-display); font-size: clamp(56px, 7vw, 112px); line-height: 0.9; letter-spacing: -0.02em; text-transform: uppercase; margin-bottom: 32px; }
+    .project-left h1 .italic { font-family: var(--font-serif); font-style: italic; font-weight: 300; color: var(--marketing-purple-bright); text-transform: none; }
+    .project-tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--marketing-cyan); margin-bottom: 24px; }
+    .project-tag::before { content: '◆ '; }
+    .project-intro { color: var(--ink-dim); font-size: 16px; line-height: 1.7; margin-bottom: 48px; max-width: 480px; }
 
-  <!-- NAV -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-dark/95 backdrop-blur-xl border-b border-primary/8">
-    <nav class="max-w-7xl mx-auto px-6 lg:px-8 py-5 flex items-center justify-between">
-      <a href="index.html" class="font-display text-2xl tracking-tight">
-        <span class="text-primary">TBO</span> <span class="text-light/60">Studio</span>
-      </a>
-      <ul class="hidden md:flex items-center gap-8 text-sm font-bold text-light">
-        <li><a href="index.html#services" class="hover:text-white transition duration-300">Services</a></li>
-        <li><a href="index.html#about" class="hover:text-white transition duration-300">À propos</a></li>
-        <li><a href="blog.html" class="hover:text-white transition duration-300">Blog</a></li>
-        <li>
-          <a href="projet.html" class="bg-primary text-dark px-5 py-2.5 rounded-md hover:bg-primary-light transition font-semibold text-sm">
-            Démarrer un projet
-          </a>
-        </li>
+    .project-steps { list-style: none; margin-bottom: 56px; }
+    .project-step { padding: 20px 0; border-top: 1px solid var(--ink-faint); display: grid; grid-template-columns: 50px 1fr; gap: 24px; align-items: center; }
+    .project-step:last-child { border-bottom: 1px solid var(--ink-faint); }
+    .step-num { font-family: var(--font-mono); font-size: 12px; color: var(--marketing-cyan); letter-spacing: 0.15em; }
+    .step-text { font-family: var(--font-display); font-size: 20px; letter-spacing: -0.005em; text-transform: uppercase; }
+    .step-text small { display: block; font-family: var(--font-body); font-size: 13px; color: var(--ink-mute); text-transform: none; letter-spacing: 0; margin-top: 4px; }
+
+    .project-contact { padding: 24px 0; border-top: 1px solid var(--ink-faint); }
+    .project-contact a {
+      display: flex; align-items: center; gap: 16px;
+      font-family: var(--font-display); font-size: 22px; letter-spacing: -0.005em; text-transform: uppercase;
+      color: var(--ink); transition: color 0.3s;
+    }
+    .project-contact a:hover { color: var(--marketing-purple-bright); }
+    .project-contact a small { font-family: var(--font-mono); font-size: 10px; color: var(--ink-mute); letter-spacing: 0.2em; text-transform: uppercase; }
+
+    .project-form {
+      background: rgba(10, 6, 38, 0.5);
+      border: 1px solid var(--ink-faint);
+      padding: 48px;
+      backdrop-filter: blur(12px);
+    }
+    .form-group { margin-bottom: 24px; }
+    .form-group label { display: block; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 8px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 14px 18px;
+      background: rgba(0, 0, 0, 0.4); border: 1px solid var(--ink-faint);
+      color: var(--ink); font-family: var(--font-body); font-size: 15px;
+      outline: none; transition: border-color 0.3s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--marketing-purple); }
+    .form-group select option { background: #04020F; color: var(--ink); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .budget-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .budget-opt {
+      padding: 16px;
+      border: 1px solid var(--ink-faint);
+      cursor: pointer;
+      transition: all 0.3s;
+      text-align: center;
+    }
+    .budget-opt:hover { border-color: var(--marketing-purple); }
+    .budget-opt input { display: none; }
+    .budget-opt:has(input:checked) { background: rgba(157, 92, 255, 0.12); border-color: var(--marketing-purple); }
+    .budget-opt .price { font-family: var(--font-display); font-size: 18px; letter-spacing: -0.005em; }
+    .budget-opt .desc { font-family: var(--font-mono); font-size: 10px; color: var(--ink-mute); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+    .submit-btn {
+      width: 100%; padding: 20px;
+      background: linear-gradient(90deg, var(--marketing-purple), var(--marketing-cyan));
+      color: #04020F;
+      font-family: var(--font-display); font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase;
+      border: none; cursor: pointer; transition: all 0.3s;
+    }
+    .submit-btn:hover { filter: brightness(1.1); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(157, 92, 255, 0.3); }
+
+    @media (max-width: 1024px) { .project-grid { grid-template-columns: 1fr; gap: 60px; } .project-form { padding: 32px 24px; } .project-page { padding: 120px 24px 60px; } }
+    @media (max-width: 600px) { .form-row, .budget-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="cursor-dot"></div>
+
+  <header class="nav scrolled" id="nav">
+    <a href="/" class="nav-logo">
+      <img class="nav-logo-mark" src="assets/img/brand/logo-ccp.svg" alt="" />
+      <span class="nav-logo-text">COSMIC CHAOS <span class="small">PRODUCTION</span></span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="marketing.html" class="nav-link">Marketing</a></li>
+        <li><a href="cinema.html" class="nav-link">Cinéma</a></li>
+        <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+        <li><a href="about.html" class="nav-link">Studio</a></li>
+        <li><a href="blog.html" class="nav-link">Journal</a></li>
       </ul>
-      <button id="menu-btn" class="md:hidden text-muted focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
     </nav>
+    <a href="projet.html" class="nav-cta">Devis</a>
   </header>
 
-  <!-- PAGE PROJET -->
-  <section class="pt-36 pb-28">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-16 items-start">
+  <section class="project-page">
+    <div class="project-grid">
 
-        <!-- Colonne gauche -->
-        <div>
-          <span class="text-primary font-semibold text-xs uppercase tracking-[0.2em]">Nouveau projet</span>
-          <h1 class="font-display text-4xl md:text-5xl mt-3 mb-6 tracking-tight">Parlez-nous de <span class="italic">votre projet</span></h1>
-          <p class="text-muted leading-relaxed mb-8 font-light">
-            Remplissez ce formulaire pour que nous comprenions votre besoin. Retour personnalisé sous 24h — gratuit et sans engagement.
-          </p>
+      <div class="project-left">
+        <div class="project-tag">Démarrer un projet</div>
+        <h1>Parlons<br><span class="italic">chaos.</span></h1>
+        <p class="project-intro">
+          Décrivez votre besoin — marketing, cinéma, ou les deux. Retour personnalisé sous 24h.
+          Gratuit, sans engagement, sans bullshit.
+        </p>
 
-          <div class="space-y-6">
-            <div class="flex gap-4">
-              <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-sm flex-shrink-0">1</div>
-              <div>
-                <p class="font-semibold text-sm">Vous décrivez votre projet</p>
-                <p class="text-muted text-sm font-light">Votre activité, vos besoins, votre budget.</p>
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-sm flex-shrink-0">2</div>
-              <div>
-                <p class="font-semibold text-sm">Nous analysons et vous recontactons</p>
-                <p class="text-muted text-sm font-light">Un retour personnalisé sous 24h.</p>
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-sm flex-shrink-0">3</div>
-              <div>
-                <p class="font-semibold text-sm">On se rencontre</p>
-                <p class="text-muted text-sm font-light">Nous nous déplaçons sur votre chantier ou dans vos locaux.</p>
-              </div>
-            </div>
-          </div>
+        <ol class="project-steps">
+          <li class="project-step"><span class="step-num">01</span><span class="step-text">Vous décrivez<small>Activité, besoin, budget</small></span></li>
+          <li class="project-step"><span class="step-num">02</span><span class="step-text">On analyse<small>Retour personnalisé sous 24h</small></span></li>
+          <li class="project-step"><span class="step-num">03</span><span class="step-text">On se rencontre<small>Visio ou IRL, c'est selon</small></span></li>
+          <li class="project-step"><span class="step-num">04</span><span class="step-text">On lance<small>Cadrage + go production</small></span></li>
+        </ol>
 
-          <div class="mt-10 space-y-4">
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                </svg>
-              </div>
-              <div>
-                <p class="text-sm text-muted">Email</p>
-                <p class="font-semibold">contact@tbo-studio.fr</p>
-              </div>
-            </div>
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                </svg>
-              </div>
-              <div>
-                <p class="text-sm text-muted">Localisation</p>
-                <p class="font-semibold">Sud de la France — nous nous déplaçons</p>
-              </div>
-            </div>
-          </div>
+        <div class="project-contact">
+          <a href="mailto:contact@cosmicchaos.fr"><div><small>Email</small><br>contact@cosmicchaos.fr</div></a>
         </div>
-
-        <!-- Colonne droite — Formulaire -->
-        <div>
-          <form class="contact-form" id="project-form">
-            <div class="grid grid-cols-2 gap-4">
-              <div class="form-group">
-                <label>Prénom</label>
-                <input type="text" placeholder="Jean" required />
-              </div>
-              <div class="form-group">
-                <label>Nom</label>
-                <input type="text" placeholder="Dupont" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Nom de l'entreprise</label>
-              <input type="text" placeholder="Votre entreprise BTP..." required />
-            </div>
-            <div class="form-group">
-              <label>Email</label>
-              <input type="email" placeholder="jean@exemple.fr" required />
-            </div>
-            <div class="form-group">
-              <label>Téléphone</label>
-              <input type="tel" placeholder="06 12 34 56 78" />
-            </div>
-            <div class="form-group">
-              <label>Type de projet</label>
-              <select required>
-                <option value="" disabled selected>Choisir un service</option>
-                <option>Site web vitrine</option>
-                <option>Référencement SEO</option>
-                <option>Google Ads / SEA</option>
-                <option>Photo de chantier</option>
-                <option>Vidéo drone</option>
-                <option>Timelapse chantier</option>
-                <option>Pack communication complète</option>
-                <option>Autre</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Budget envisagé</label>
-              <div class="grid grid-cols-2 gap-3">
-                <label class="budget-option">
-                  <input type="radio" name="budget" value="500-1500" class="hidden peer" required />
-                  <div class="peer-checked:border-primary peer-checked:bg-primary/5 border border-primary/10 rounded-lg px-4 py-3 text-center cursor-pointer transition hover:border-primary/30">
-                    <p class="text-light font-semibold text-sm">500 — 1 500 €</p>
-                    <p class="text-muted text-xs font-light">Site vitrine</p>
-                  </div>
-                </label>
-                <label class="budget-option">
-                  <input type="radio" name="budget" value="1500-3000" class="hidden peer" />
-                  <div class="peer-checked:border-primary peer-checked:bg-primary/5 border border-primary/10 rounded-lg px-4 py-3 text-center cursor-pointer transition hover:border-primary/30">
-                    <p class="text-light font-semibold text-sm">1 500 — 3 000 €</p>
-                    <p class="text-muted text-xs font-light">Site + SEO</p>
-                  </div>
-                </label>
-                <label class="budget-option">
-                  <input type="radio" name="budget" value="3000-6000" class="hidden peer" />
-                  <div class="peer-checked:border-primary peer-checked:bg-primary/5 border border-primary/10 rounded-lg px-4 py-3 text-center cursor-pointer transition hover:border-primary/30">
-                    <p class="text-light font-semibold text-sm">3 000 — 6 000 €</p>
-                    <p class="text-muted text-xs font-light">Pack digital + visuel</p>
-                  </div>
-                </label>
-                <label class="budget-option">
-                  <input type="radio" name="budget" value="6000+" class="hidden peer" />
-                  <div class="peer-checked:border-primary peer-checked:bg-primary/5 border border-primary/10 rounded-lg px-4 py-3 text-center cursor-pointer transition hover:border-primary/30">
-                    <p class="text-light font-semibold text-sm">6 000 € +</p>
-                    <p class="text-muted text-xs font-light">Projet sur mesure</p>
-                  </div>
-                </label>
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Décrivez votre projet</label>
-              <textarea rows="4" placeholder="Votre activité, type de chantier, ce que vous attendez..." required></textarea>
-            </div>
-            <button type="submit" class="btn-primary w-full justify-center">
-              Envoyer mon projet
-              <svg class="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
-              </svg>
-            </button>
-          </form>
-        </div>
-
       </div>
+
+      <form class="project-form" id="project-form" onsubmit="event.preventDefault(); const b=this.querySelector('.submit-btn'); b.textContent='Projet envoyé ✓'; b.style.background='#22c55e'; setTimeout(()=>{b.textContent='Envoyer mon projet';b.style.background='';this.reset();},3000);">
+        <div class="form-row">
+          <div class="form-group"><label>Prénom</label><input type="text" placeholder="Théo" required /></div>
+          <div class="form-group"><label>Nom</label><input type="text" placeholder="Dupont" required /></div>
+        </div>
+        <div class="form-group"><label>Entreprise</label><input type="text" placeholder="Votre marque" required /></div>
+        <div class="form-row">
+          <div class="form-group"><label>Email</label><input type="email" placeholder="theo@marque.fr" required /></div>
+          <div class="form-group"><label>Téléphone</label><input type="tel" placeholder="06 12 34 56 78" /></div>
+        </div>
+        <div class="form-group">
+          <label>Univers</label>
+          <select required>
+            <option value="" disabled selected>Choisir un univers...</option>
+            <option>Marketing — Branding</option>
+            <option>Marketing — Site web</option>
+            <option>Marketing — SEO / SEA</option>
+            <option>Marketing — Social media</option>
+            <option>Cinéma — Film de marque</option>
+            <option>Cinéma — Vidéo drone</option>
+            <option>Cinéma — Timelapse</option>
+            <option>Cinéma — Photographie</option>
+            <option>Pack mixte Marketing + Cinéma</option>
+            <option>Autre / à discuter</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Budget envisagé</label>
+          <div class="budget-grid">
+            <label class="budget-opt"><input type="radio" name="budget" value="1-3" required /><div class="price">1 — 3 K€</div><div class="desc">Petit projet</div></label>
+            <label class="budget-opt"><input type="radio" name="budget" value="3-8" /><div class="price">3 — 8 K€</div><div class="desc">Projet standard</div></label>
+            <label class="budget-opt"><input type="radio" name="budget" value="8-20" /><div class="price">8 — 20 K€</div><div class="desc">Projet d'envergure</div></label>
+            <label class="budget-opt"><input type="radio" name="budget" value="20+" /><div class="price">20 K€ +</div><div class="desc">Sur mesure</div></label>
+          </div>
+        </div>
+        <div class="form-group"><label>Décrivez votre projet</label><textarea rows="5" placeholder="Activité, objectifs, contexte, deadline..." required></textarea></div>
+        <button type="submit" class="submit-btn">Envoyer mon projet →</button>
+      </form>
+
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-primary/8 py-10">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="font-display text-2xl"><span class="text-primary">TBO</span> <span class="text-light/50">Studio</span></p>
-      <p class="text-muted/50 text-sm">&copy; 2026 TBO Studio. Tous droits réservés.</p>
-      <div class="flex gap-6 text-sm text-muted">
-        <a href="index.html#services" class="hover:text-light transition duration-300">Services</a>
-        <a href="blog.html" class="hover:text-light transition duration-300">Blog</a>
-        <a href="index.html#contact" class="hover:text-light transition duration-300">Contact</a>
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Cosmic Chaos</div>
+        <p class="footer-tagline">Studio créatif dual. Marketing digital cosmique × Production audiovisuelle cinématique.</p>
       </div>
+      <div class="footer-col"><h4>Univers</h4><ul><li><a href="marketing.html">Marketing</a></li><li><a href="cinema.html">Cinéma</a></li><li><a href="realisations.html">Réalisations</a></li></ul></div>
+      <div class="footer-col"><h4>Studio</h4><ul><li><a href="blog.html">Journal</a></li><li><a href="projet.html">Devis</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:contact@cosmicchaos.fr">contact@cosmicchaos.fr</a></li></ul></div>
     </div>
+    <div class="footer-bottom"><span>© 2026 Cosmic Chaos Production</span><span>Marketing × Cinéma · France</span></div>
   </footer>
 
-  <script>
-    const form = document.getElementById('project-form');
-    if (form) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const btn = form.querySelector('button[type="submit"]');
-        btn.textContent = 'Projet envoyé \u2713';
-        btn.style.background = '#22c55e';
-        btn.style.color = '#fff';
-        btn.disabled = true;
-        setTimeout(() => {
-          btn.innerHTML = 'Envoyer mon projet <svg class="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>';
-          btn.style.background = '';
-          btn.style.color = '';
-          btn.disabled = false;
-          form.reset();
-        }, 3000);
-      });
-    }
-  </script>
+  <script src="assets/js/cosmic.js" defer></script>
 </body>
 </html>
