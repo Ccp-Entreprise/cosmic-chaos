@@ -63,15 +63,24 @@
       }
 
       .tbo-gate-logo {
-        font-family: 'Syne', sans-serif;
-        font-size: 20px;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        margin-bottom: 40px;
+        font-family: 'Anton', 'Bebas Neue', Impact, sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
       }
-      .tbo-gate-logo .digital { color: #4A7CF7; }
-      .tbo-gate-logo .dot { color: rgba(240,238,232,0.25); margin: 0 6px; }
+      .tbo-gate-logo .digital { color: #F0EEE8; }
+      .tbo-gate-logo .dot { color: rgba(240,238,232,0.25); margin: 0 8px; }
       .tbo-gate-logo .studio { color: #F0EEE8; }
+      .tbo-gate-sub-logo {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 0.3em;
+        color: rgba(240,238,232,0.45);
+        text-transform: uppercase;
+        margin-bottom: 32px;
+      }
 
       .tbo-gate-badge {
         display: inline-flex;
@@ -110,8 +119,10 @@
         line-height: 1.1;
       }
       .tbo-gate-title em {
-        font-style: normal;
-        background: linear-gradient(90deg, #4A7CF7, #D4953C);
+        font-style: italic;
+        font-family: 'Fraunces', Georgia, serif;
+        font-weight: 300;
+        background: linear-gradient(90deg, #9D5CFF, #00E0FF);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -158,8 +169,8 @@
 
       .tbo-gate-btn {
         width: 100%;
-        background: linear-gradient(90deg, #4A7CF7, #D4953C);
-        color: #fff;
+        background: linear-gradient(90deg, #9D5CFF, #00E0FF);
+        color: #04020F;
         font-family: 'DM Sans', sans-serif;
         font-size: 14px;
         font-weight: 700;
@@ -177,7 +188,7 @@
       .tbo-gate-btn:hover {
         transform: translateY(-1px);
         filter: brightness(1.08);
-        box-shadow: 0 8px 30px rgba(74,124,247,0.2), 0 8px 30px rgba(212,149,60,0.15);
+        box-shadow: 0 8px 30px rgba(157,92,255,0.3), 0 8px 30px rgba(0,224,255,0.2);
       }
 
       .tbo-gate-error {
@@ -218,11 +229,12 @@
       <div class="tbo-gate-grain"></div>
       <div class="tbo-gate-card">
         <div class="tbo-gate-logo">
-          <span class="digital">TBO</span><span class="dot">·</span><span class="studio">Studio</span>
+          <span class="digital">Cosmic</span><span class="dot">·</span><span class="studio">Chaos</span>
         </div>
+        <div class="tbo-gate-sub-logo">Production · MMXXVI</div>
         <div class="tbo-gate-badge">Site en construction</div>
         <h1 class="tbo-gate-title">Accès <em>réservé.</em></h1>
-        <p class="tbo-gate-sub">Ce site est en cours de finalisation. Entrez votre code d'accès pour continuer.</p>
+        <p class="tbo-gate-sub">Le nouveau studio est en cours de finalisation. Entrez votre code d'accès pour découvrir le projet.</p>
         <form class="tbo-gate-form" id="tbo-gate-form" autocomplete="off">
           <input
             id="tbo-gate-input"
@@ -242,7 +254,7 @@
           </button>
           <p class="tbo-gate-error" id="tbo-gate-error"></p>
         </form>
-        <p class="tbo-gate-foot">© 2026 TBO Studio</p>
+        <p class="tbo-gate-foot">© 2026 Cosmic Chaos Production</p>
       </div>
     `;
     document.body.appendChild(overlay);

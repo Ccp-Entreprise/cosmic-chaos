@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cinéma — Cosmic Chaos Production</title>
+  <meta name="description" content="Univers Cinéma : production audiovisuelle cinématique. Films de marque, vidéo drone, timelapse, photographie professionnelle." />
+  <link rel="canonical" href="https://cosmicchaos.fr/cinema.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/cosmic.css" />
+  <style>html:not(.tbo-authed) body > *:not(#tbo-gate){visibility:hidden!important}html:not(.tbo-authed) body{overflow:hidden!important;background:#0A0907}</style>
+  <script>if(sessionStorage.getItem('tbo_access_v1')==='granted')document.documentElement.classList.add('tbo-authed');</script>
+  <script src="assets/js/gate.js"></script>
+  <style>
+    .cinema-hero {
+      min-height: 90vh;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 160px 60px 80px;
+      background: #0A0907;
+    }
+    .cinema-hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=2400&q=85&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.45) contrast(1.15) saturate(0.7);
+      animation: cinemaZoom 32s ease-in-out infinite alternate;
+    }
+    .cinema-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.9) 100%),
+                  linear-gradient(to right, rgba(0,0,0,0.7) 0%, transparent 50%);
+      z-index: 1;
+    }
+    .cinema-hero > *:not(.cinema-hero-bg) { position: relative; z-index: 2; }
+    .cinema-tag {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--cinema-warm);
+      margin-bottom: 24px;
+    }
+    .cinema-tag::before { content: '◆ '; color: var(--cinema-accent); }
+    .cinema-title {
+      font-family: var(--font-display);
+      font-size: clamp(72px, 11vw, 200px);
+      line-height: 0.88;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      max-width: 1100px;
+      color: var(--cinema-cream);
+    }
+    .cinema-title .italic {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--cinema-warm);
+      text-transform: none;
+    }
+    .cinema-intro {
+      max-width: 720px;
+      margin-top: 56px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--ink-dim);
+    }
+    .formats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--ink-faint);
+    }
+    .format-card {
+      background: #0A0907;
+      padding: 60px 50px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.5s ease;
+    }
+    .format-card:hover { background: #050403; }
+    .format-card::before {
+      content: '';
+      position: absolute;
+      top: 60px; right: 60px;
+      width: 80px; height: 80px;
+      border: 1px solid var(--ink-faint);
+      border-radius: 50%;
+      opacity: 0.4;
+    }
+    .format-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--cinema-accent);
+      letter-spacing: 0.2em;
+      margin-bottom: 32px;
+    }
+    .format-title {
+      font-family: var(--font-display);
+      font-size: 40px;
+      letter-spacing: -0.005em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      color: var(--cinema-cream);
+    }
+    .format-desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--ink-dim);
+      margin-bottom: 24px;
+    }
+    .format-specs {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: var(--ink-mute);
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    @media (max-width: 768px) {
+      .formats-grid { grid-template-columns: 1fr; }
+      .cinema-hero { padding: 120px 24px 60px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="cursor-dot"></div>
+
+  <header class="nav scrolled" id="nav">
+    <a href="/" class="nav-logo">
+      <img class="nav-logo-mark" src="assets/img/brand/logo-ccp.svg" alt="" />
+      <span class="nav-logo-text">COSMIC CHAOS <span class="small">PRODUCTION</span></span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="marketing.html" class="nav-link">Marketing</a></li>
+        <li><a href="cinema.html" class="nav-link">Cinéma</a></li>
+        <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+        <li><a href="blog.html" class="nav-link">Journal</a></li>
+      </ul>
+    </nav>
+    <a href="projet.html" class="nav-cta">Devis</a>
+  </header>
+
+  <section class="cinema-hero">
+    <div class="cinema-hero-bg"></div>
+    <div class="cinema-tag">Univers 02 — Cinéma</div>
+    <h1 class="cinema-title">
+      Production<br>
+      <span class="italic">cinématique.</span>
+    </h1>
+    <p class="cinema-intro">
+      Films de marque, drone, timelapse, photographie. Toute prestation audiovisuelle
+      portée par une exigence visuelle de niveau cinéma. Du brief à la livraison.
+    </p>
+  </section>
+
+  <section class="formats-grid">
+    <div class="format-card">
+      <div class="format-num">01 / Film</div>
+      <h2 class="format-title">Films de marque</h2>
+      <p class="format-desc">Vidéos corporate, films de produit, brand stories. Écriture, tournage, montage, étalonnage.</p>
+      <div class="format-specs">
+        <span>4K · 6K cinéma</span>
+        <span>Cadrage + interview</span>
+        <span>Post-prod incluse</span>
+      </div>
+    </div>
+    <div class="format-card">
+      <div class="format-num">02 / Drone</div>
+      <h2 class="format-title">Vidéo drone</h2>
+      <p class="format-desc">Captation aérienne pour événement, immobilier, industrie, sport. Pilotes télécommandés certifiés.</p>
+      <div class="format-specs">
+        <span>4K HDR</span>
+        <span>Pilote breveté DGAC</span>
+        <span>Assurance pro</span>
+      </div>
+    </div>
+    <div class="format-card">
+      <div class="format-num">03 / Timelapse</div>
+      <h2 class="format-title">Timelapse pro</h2>
+      <p class="format-desc">Captation longue durée pour construction, événementiel, nature. Caméras dédiées en autonomie.</p>
+      <div class="format-specs">
+        <span>Caméras autonomes</span>
+        <span>De 1 jour à 18 mois</span>
+        <span>Hosting + streaming</span>
+      </div>
+    </div>
+    <div class="format-card">
+      <div class="format-num">04 / Photo</div>
+      <h2 class="format-title">Photographie</h2>
+      <p class="format-desc">Reportage corporate, packshot produit, portrait, événementiel. Tirage et retouche fine.</p>
+      <div class="format-specs">
+        <span>Full-frame</span>
+        <span>Studio ou extérieur</span>
+        <span>Retouche pro</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-band" id="contact">
+    <div class="contact-tag">— Démarrer un projet cinéma</div>
+    <h2 class="contact-headline">Tournons<br><span class="italic">ensemble.</span></h2>
+    <a href="projet.html" class="contact-cta">Demander un devis <span class="arrow"></span></a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Cosmic Chaos</div>
+        <p class="footer-tagline">Studio créatif dual. Marketing digital cosmique × Production audiovisuelle cinématique.</p>
+      </div>
+      <div class="footer-col"><h4>Univers</h4><ul><li><a href="marketing.html">Marketing</a></li><li><a href="cinema.html">Cinéma</a></li><li><a href="realisations.html">Réalisations</a></li></ul></div>
+      <div class="footer-col"><h4>Studio</h4><ul><li><a href="blog.html">Journal</a></li><li><a href="projet.html">Devis</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:contact@cosmicchaos.fr">contact@cosmicchaos.fr</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Cosmic Chaos Production</span><span>Marketing × Cinéma · France</span></div>
+  </footer>
+
+  <script src="assets/js/cosmic.js" defer></script>
+</body>
+</html>

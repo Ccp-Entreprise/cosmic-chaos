@@ -3,764 +3,367 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="TBO Studio — Agence communication & marketing digital et production visuelle (drone, timelapse, vidéo) pour les entreprises du BTP, artisans et promoteurs immobiliers." />
-  <meta name="keywords" content="communication BTP, marketing digital BTP, vidéo drone chantier, timelapse construction, site web BTP, SEO BTP, photo chantier, agence BTP, TBO Studio" />
-  <link rel="canonical" href="https://tbo-studio.fr/" />
-  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-  <meta property="og:title" content="TBO Studio — Communication & Production Visuelle BTP" />
-  <meta property="og:description" content="Deux expertises, une seule agence. Communication digitale et production visuelle professionnelle pour le BTP." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tbo-studio.fr/" />
-  <meta property="og:image" content="https://tbo-studio.fr/assets/img/og-image.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TBO Studio — Communication & Production Visuelle BTP" />
-  <meta name="twitter:description" content="Deux expertises, une seule agence. Communication digitale et production visuelle pour le BTP." />
-  <title>TBO Studio — Communication & Production Visuelle pour le BTP</title>
+  <title>Cosmic Chaos Production — Marketing × Cinéma</title>
+  <meta name="description" content="Studio créatif dual : marketing digital cosmique × production audiovisuelle cinématique. Drone, timelapse, films de marque, branding, SEO, campagnes. On capte. On monte. On livre." />
+  <meta name="keywords" content="cosmic chaos production, agence créative, marketing digital, production audiovisuelle, drone, timelapse, film de marque, branding, paris" />
+  <link rel="canonical" href="https://cosmicchaos.fr/" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            digital:   '#4A7CF7',
-            'dg-dark': '#050C1F',
-            'dg-mid':  '#0B1835',
-            prod:      '#D4953C',
-            'pd-dark': '#0C0906',
-            'pd-mid':  '#1A1208',
-            base:      '#060606',
-            card:      '#111111',
-            surface:   '#161616',
-            light:     '#F0EEE8',
-            warm:      '#B0ADA8',
-            muted:     '#6B6966',
-          },
-          fontFamily: {
-            display: ['Syne', 'sans-serif'],
-            sans:    ['DM Sans', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cosmic Chaos Production" />
+  <meta property="og:description" content="Marketing cosmique × Cinéma cinématique. Studio créatif dual." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cosmicchaos.fr/" />
+  <meta property="og:image" content="https://cosmicchaos.fr/assets/img/brand/og.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cosmic Chaos Production" />
+  <meta name="twitter:description" content="On capte. On monte. On livre." />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
 
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/cosmic.css" />
+
+  <!-- Access gate (WIP) -->
+  <style>html:not(.tbo-authed) body > *:not(#tbo-gate){visibility:hidden!important}html:not(.tbo-authed) body{overflow:hidden!important;background:#04020F}</style>
+  <script>if(sessionStorage.getItem('tbo_access_v1')==='granted')document.documentElement.classList.add('tbo-authed');</script>
+  <script src="assets/js/gate.js"></script>
+
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "TBO Studio",
-    "description": "Agence de communication digitale et production visuelle spécialisée BTP",
-    "url": "https://tbo-studio.fr",
-    "areaServed": "France",
-    "serviceType": ["Communication digitale", "Production vidéo", "Photographie", "SEO", "Google Ads"]
+    "@type": "Organization",
+    "name": "Cosmic Chaos Production",
+    "alternateName": "Cosmic Chaos",
+    "description": "Studio créatif dual — marketing digital × production audiovisuelle (drone, timelapse, films de marque).",
+    "url": "https://cosmicchaos.fr",
+    "logo": "https://cosmicchaos.fr/assets/img/brand/logo-ccp.svg",
+    "areaServed": "France"
   }
   </script>
-  <style>html:not(.tbo-authed) body > *:not(#tbo-gate){visibility:hidden!important}html:not(.tbo-authed) body{overflow:hidden!important;background:#060606}</style>
-  <script>if(sessionStorage.getItem('tbo_access_v1')==='granted')document.documentElement.classList.add('tbo-authed');</script>
-  <script src="assets/js/gate.js"></script>
 </head>
-<body class="bg-base text-light font-sans overflow-x-hidden">
+<body>
 
-<!-- ══ GRAIN OVERLAY ══ -->
-<div class="grain-overlay" aria-hidden="true"></div>
+  <!-- Texture grain (cinéma) -->
+  <div class="grain" aria-hidden="true"></div>
 
-<!-- ══ NAVBAR ══ -->
-<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
-  <nav class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
-    <a href="/" class="font-display text-xl font-bold tracking-tight z-10">
-      <span class="text-digital">TBO</span><span class="text-light/30 mx-1">·</span><span class="text-light">Studio</span>
+  <!-- Cursor follower -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════════════════════════════ -->
+  <header class="nav" id="nav">
+    <a href="/" class="nav-logo" aria-label="Cosmic Chaos Production">
+      <img class="nav-logo-mark" src="assets/img/brand/logo-ccp.svg" alt="" />
+      <span class="nav-logo-text">
+        COSMIC CHAOS
+        <span class="small">PRODUCTION</span>
+      </span>
     </a>
-    <ul class="hidden md:flex items-center gap-8 text-sm font-bold text-light">
-      <li class="group relative">
-        <button class="hover:text-white transition flex items-center gap-1">
-          Services
-          <svg class="w-3 h-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </button>
-        <div class="nav-dropdown group-hover:opacity-100 group-hover:visible opacity-0 invisible absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 bg-card border border-white/6 rounded-xl overflow-hidden shadow-2xl transition-all duration-200">
-          <a href="services-communication.html" class="flex items-center gap-3 px-5 py-4 hover:bg-surface transition group/item border-b border-white/5">
-            <span class="w-8 h-8 rounded-lg bg-digital/10 flex items-center justify-center text-digital text-sm">⚡</span>
-            <div>
-              <p class="text-light text-sm font-semibold">Communication</p>
-              <p class="text-muted text-xs">Site web · SEO · Google Ads</p>
-            </div>
-          </a>
-          <a href="services-production.html" class="flex items-center gap-3 px-5 py-4 hover:bg-surface transition group/item">
-            <span class="w-8 h-8 rounded-lg bg-prod/10 flex items-center justify-center text-prod text-sm">🎥</span>
-            <div>
-              <p class="text-light text-sm font-semibold">Production Visuelle</p>
-              <p class="text-muted text-xs">Drone · Timelapse · Photo</p>
-            </div>
-          </a>
-        </div>
-      </li>
-      <li><a href="#realisations" class="hover:text-white transition">Réalisations</a></li>
-      <li><a href="#about" class="hover:text-white transition">À propos</a></li>
-      <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
-    </ul>
-    <a href="projet.html" class="hidden md:inline-flex items-center gap-2 bg-light text-base px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-white transition duration-200">
-      Devis gratuit
-      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-    </a>
-    <button id="menu-btn" class="md:hidden text-muted p-1">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="marketing.html" class="nav-link">Marketing</a></li>
+        <li><a href="cinema.html" class="nav-link">Cinéma</a></li>
+        <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+        <li><a href="blog.html" class="nav-link">Journal</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a href="projet.html" class="nav-cta">Démarrer un projet</a>
+
+    <button class="nav-burger" id="nav-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
     </button>
-  </nav>
-  <div id="mobile-menu" class="hidden md:hidden bg-card/98 backdrop-blur-xl px-6 pb-6 border-b border-white/5">
-    <ul class="flex flex-col gap-1 text-sm font-bold pt-2">
-      <li><a href="services-communication.html" class="flex items-center gap-3 py-3 text-light hover:text-white transition border-b border-white/5">
-        <span class="text-digital">⚡</span> Communication & Marketing
-      </a></li>
-      <li><a href="services-production.html" class="flex items-center gap-3 py-3 text-light hover:text-white transition border-b border-white/5">
-        <span class="text-prod">🎥</span> Production Visuelle
-      </a></li>
-      <li><a href="#realisations" class="flex items-center gap-3 py-3 text-light hover:text-white transition border-b border-white/5">Réalisations</a></li>
-      <li><a href="#about" class="flex items-center gap-3 py-3 text-light hover:text-white transition border-b border-white/5">À propos</a></li>
-      <li><a href="blog.html" class="flex items-center gap-3 py-3 text-light hover:text-white transition border-b border-white/5">Blog</a></li>
-      <li class="pt-2">
-        <a href="projet.html" class="w-full flex justify-center bg-light text-base px-5 py-3 rounded-lg font-semibold">Devis gratuit</a>
-      </li>
-    </ul>
-  </div>
-</header>
+  </header>
 
+  <!-- ══════════════════════════════════════════════════════════════════
+       HERO — BEFORE/AFTER SLIDER
+  ══════════════════════════════════════════════════════════════════════ -->
+  <section class="hero" id="hero" style="--slider-pos: 50%;">
 
-<!-- ══ HERO SPLIT SCREEN ══ -->
-<section class="split-hero" id="hero" aria-label="TBO Studio — deux univers">
-
-  <!-- PANEL GAUCHE : Communication & Marketing -->
-  <div class="panel panel-digital" id="panelDigital" role="link" tabindex="0" aria-label="Communication et Marketing digital">
-    <div class="panel-bg panel-bg-digital"></div>
-    <div class="panel-glow panel-glow-digital"></div>
-    <div class="panel-grid"></div>
-
-    <!-- Label collapsed (visible quand ce panel est réduit) -->
-    <div class="panel-collapsed">
-      <span class="collapsed-icon">⚡</span>
-      <span class="collapsed-text">Digital</span>
+    <!-- LAYER 1 : Cinema background (placeholder cinematic image) -->
+    <div class="hero-cinema" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1500964757637-c85e8a162699?w=2400&q=85&auto=format&fit=crop" alt="" />
     </div>
 
-    <!-- Title marker universe 01 -->
-    <div class="universe-marker marker-digital" aria-hidden="true">
-      <span class="universe-num">01</span>
-      <span class="universe-bar"></span>
-      <span class="universe-word">Univers<br><strong>Digital</strong></span>
-    </div>
+    <!-- LAYER 2 : Marketing cosmic overlay (clipped) -->
+    <div class="hero-marketing" aria-hidden="true"></div>
 
-    <!-- Contenu principal -->
-    <div class="panel-content panel-content-digital">
-      <div class="universe-badge badge-digital">
-        <span class="badge-dot badge-dot-digital"></span>
-        Communication & Marketing
-      </div>
-      <h1 class="panel-headline">
-        Votre visibilité,<br>
-        <em>notre mission.</em>
-      </h1>
-      <p class="panel-sub">
-        Sites web, SEO, Google Ads et branding — tout ce qu'il faut pour que vos clients vous trouvent avant la concurrence.
-      </p>
-      <div class="panel-pills">
-        <span class="pill pill-digital">Site web</span>
-        <span class="pill pill-digital">SEO</span>
-        <span class="pill pill-digital">Google Ads</span>
-        <span class="pill pill-digital">Branding</span>
-      </div>
-      <a href="services-communication.html" class="panel-cta cta-digital">
-        Explorer l'univers
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </a>
-    </div>
-  </div>
+    <!-- LAYER 3 : Centered content -->
+    <div class="hero-content">
 
-  <!-- DIVIDER -->
-  <div class="split-divider" aria-hidden="true">
-    <div class="divider-logo">
-      <span class="font-display font-bold text-xs tracking-widest text-white/30">TBO</span>
-    </div>
-  </div>
-
-  <!-- PANEL DROIT : Production Visuelle -->
-  <div class="panel panel-production" id="panelProduction" role="link" tabindex="0" aria-label="Production visuelle drone timelapse photo">
-    <div class="panel-bg panel-bg-production"></div>
-    <div class="panel-glow panel-glow-production"></div>
-    <div class="panel-lines"></div>
-
-    <!-- Label collapsed -->
-    <div class="panel-collapsed">
-      <span class="collapsed-icon">🎥</span>
-      <span class="collapsed-text">Visuel</span>
-    </div>
-
-    <!-- Title marker universe 02 -->
-    <div class="universe-marker marker-production" aria-hidden="true">
-      <span class="universe-num">02</span>
-      <span class="universe-bar"></span>
-      <span class="universe-word">Univers<br><strong>Visuel</strong></span>
-    </div>
-
-    <!-- Contenu principal -->
-    <div class="panel-content panel-content-production">
-      <div class="universe-badge badge-production">
-        <span class="badge-dot badge-dot-production"></span>
-        Production Visuelle
-      </div>
-      <h1 class="panel-headline">
-        Vos chantiers<br>
-        <em>méritent d'être vus.</em>
-      </h1>
-      <p class="panel-sub">
-        Drone, timelapse, photo et vidéo pro — le contenu qui valorise votre savoir-faire et décroche de nouveaux marchés.
-      </p>
-      <div class="panel-pills">
-        <span class="pill pill-production">Drone</span>
-        <span class="pill pill-production">Timelapse</span>
-        <span class="pill pill-production">Photo</span>
-        <span class="pill pill-production">Vidéo</span>
-      </div>
-      <a href="services-production.html" class="panel-cta cta-production">
-        Explorer l'univers
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </a>
-    </div>
-  </div>
-
-  <!-- Scroll indicator -->
-  <div class="scroll-hint" aria-hidden="true">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
-
-
-<!-- ══ MARQUEE TICKER ══ -->
-<div class="ticker-band" aria-hidden="true">
-  <div class="ticker-track">
-    <span class="ticker-item"><span class="ticker-dot digital-dot"></span>Site web BTP</span>
-    <span class="ticker-item"><span class="ticker-dot digital-dot"></span>Référencement SEO</span>
-    <span class="ticker-item"><span class="ticker-dot digital-dot"></span>Google Ads</span>
-    <span class="ticker-item"><span class="ticker-dot prod-dot"></span>Vidéo drone</span>
-    <span class="ticker-item"><span class="ticker-dot prod-dot"></span>Timelapse chantier</span>
-    <span class="ticker-item"><span class="ticker-dot prod-dot"></span>Photo professionnelle</span>
-    <span class="ticker-item"><span class="ticker-dot digital-dot"></span>Branding</span>
-    <span class="ticker-item"><span class="ticker-dot digital-dot"></span>Réseaux sociaux</span>
-    <span class="ticker-item"><span class="ticker-dot prod-dot"></span>Montage vidéo</span>
-    <!-- Duplicate for seamless loop -->
-    <span class="ticker-item"><span class="ticker-dot digital-dot"></span>Site web BTP</span>
-    <span class="ticker-item"><span class="ticker-dot digital-dot"></span>Référencement SEO</span>
-    <span class="ticker-item"><span class="ticker-dot digital-dot"></span>Google Ads</span>
-    <span class="ticker-item"><span class="ticker-dot prod-dot"></span>Vidéo drone</span>
-    <span class="ticker-item"><span class="ticker-dot prod-dot"></span>Timelapse chantier</span>
-    <span class="ticker-item"><span class="ticker-dot prod-dot"></span>Photo professionnelle</span>
-    <span class="ticker-item"><span class="ticker-dot digital-dot"></span>Branding</span>
-    <span class="ticker-item"><span class="ticker-dot digital-dot"></span>Réseaux sociaux</span>
-    <span class="ticker-item"><span class="ticker-dot prod-dot"></span>Montage vidéo</span>
-  </div>
-</div>
-
-
-<!-- ══ STATS ══ -->
-<section class="py-20 max-w-7xl mx-auto px-6 lg:px-10">
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 rounded-2xl overflow-hidden border border-white/5">
-    <div class="stat-cell bg-base">
-      <span class="stat-number text-digital">50<span class="stat-plus">+</span></span>
-      <span class="stat-label">Clients accompagnés</span>
-    </div>
-    <div class="stat-cell bg-base">
-      <span class="stat-number text-prod">3<span class="stat-unit">ans</span></span>
-      <span class="stat-label">Expérience BTP</span>
-    </div>
-    <div class="stat-cell bg-base">
-      <span class="stat-number text-digital">100<span class="stat-unit">%</span></span>
-      <span class="stat-label">Satisfaction client</span>
-    </div>
-    <div class="stat-cell bg-base">
-      <span class="stat-number text-prod">48<span class="stat-unit">h</span></span>
-      <span class="stat-label">Délai de réponse</span>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══ SERVICES COMMUNICATION ══ -->
-<section class="py-20 bg-dg-dark/30 relative overflow-hidden" id="services-digital">
-  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-dg-dark/20 to-transparent pointer-events-none"></div>
-  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-digital/30 to-transparent"></div>
-  <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-digital/20 to-transparent"></div>
-
-  <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
-    <!-- Header -->
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 reveal">
-      <div>
-        <div class="universe-tag-section tag-digital mb-4">
-          <span class="tag-icon">⚡</span>
-          Univers Communication & Marketing
+      <!-- TOP labels -->
+      <div class="hero-labels">
+        <div class="hero-label hero-label-marketing">
+          <span class="hero-label-num">01</span>
+          <span>Univers Marketing</span>
+          <span>Cosmic · Digital · Brand</span>
         </div>
-        <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">
-          Dominez votre marché<br>
-          <span class="text-digital">en ligne.</span>
-        </h2>
-      </div>
-      <p class="text-muted max-w-xs font-light leading-relaxed">
-        Vous êtes experts dans votre métier — on s'occupe de le faire savoir.
-      </p>
-    </div>
-
-    <!-- Service cards -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
-      <a href="services-communication.html#site-web" class="service-card-v2 service-card-digital group">
-        <div class="sc-icon sc-icon-digital">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        </div>
-        <h3 class="sc-title">Création de site web</h3>
-        <p class="sc-desc">Un site vitrine ou sur mesure qui génère des appels et des demandes de devis.</p>
-        <span class="sc-link text-digital">En savoir plus →</span>
-      </a>
-      <a href="services-communication.html#seo" class="service-card-v2 service-card-digital group">
-        <div class="sc-icon sc-icon-digital">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-        </div>
-        <h3 class="sc-title">Référencement SEO</h3>
-        <p class="sc-desc">Apparaissez en premier sur Google quand vos prospects cherchent vos services.</p>
-        <span class="sc-link text-digital">En savoir plus →</span>
-      </a>
-      <a href="services-communication.html#sea" class="service-card-v2 service-card-digital group">
-        <div class="sc-icon sc-icon-digital">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-        </div>
-        <h3 class="sc-title">Google Ads (SEA)</h3>
-        <p class="sc-desc">Des campagnes publicitaires ciblées qui génèrent des leads qualifiés immédiatement.</p>
-        <span class="sc-link text-digital">En savoir plus →</span>
-      </a>
-      <a href="services-communication.html#branding" class="service-card-v2 service-card-digital group">
-        <div class="sc-icon sc-icon-digital">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
-        </div>
-        <h3 class="sc-title">Branding & Réseaux</h3>
-        <p class="sc-desc">Une image de marque professionnelle et une présence active sur les réseaux sociaux.</p>
-        <span class="sc-link text-digital">En savoir plus →</span>
-      </a>
-    </div>
-
-    <div class="mt-10 flex justify-center reveal">
-      <a href="services-communication.html" class="btn-universe btn-universe-digital">
-        Voir tous les services Communication
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══ SERVICES PRODUCTION ══ -->
-<section class="py-20 relative overflow-hidden" id="services-production">
-  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-pd-dark/30 to-transparent pointer-events-none"></div>
-  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-prod/30 to-transparent"></div>
-  <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-prod/20 to-transparent"></div>
-
-  <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 reveal">
-      <div>
-        <div class="universe-tag-section tag-production mb-4">
-          <span class="tag-icon">🎥</span>
-          Univers Production Visuelle
-        </div>
-        <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">
-          Valorisez votre<br>
-          <span class="text-prod">savoir-faire.</span>
-        </h2>
-      </div>
-      <p class="text-muted max-w-xs font-light leading-relaxed">
-        Des contenus visuels professionnels qui impressionnent vos clients et décochent des marchés.
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
-      <a href="services-production.html#drone" class="service-card-v2 service-card-production group">
-        <div class="sc-icon sc-icon-production">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
-        </div>
-        <h3 class="sc-title">Vidéo drone</h3>
-        <p class="sc-desc">Des prises de vue aériennes spectaculaires de vos chantiers, réalisations et sites.</p>
-        <span class="sc-link text-prod">En savoir plus →</span>
-      </a>
-      <a href="services-production.html#timelapse" class="service-card-v2 service-card-production group">
-        <div class="sc-icon sc-icon-production">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        </div>
-        <h3 class="sc-title">Timelapse chantier</h3>
-        <p class="sc-desc">Racontez l'histoire de votre construction de la fondation à la livraison en quelques secondes.</p>
-        <span class="sc-link text-prod">En savoir plus →</span>
-      </a>
-      <a href="services-production.html#photo" class="service-card-v2 service-card-production group">
-        <div class="sc-icon sc-icon-production">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-        </div>
-        <h3 class="sc-title">Photographie pro</h3>
-        <p class="sc-desc">Des photos de qualité qui mettent en valeur vos réalisations et inspirent confiance.</p>
-        <span class="sc-link text-prod">En savoir plus →</span>
-      </a>
-      <a href="services-production.html#video" class="service-card-v2 service-card-production group">
-        <div class="sc-icon sc-icon-production">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-        </div>
-        <h3 class="sc-title">Vidéo & Montage</h3>
-        <p class="sc-desc">Films institutionnels, présentations de chantier, vidéos de formation et bien plus.</p>
-        <span class="sc-link text-prod">En savoir plus →</span>
-      </a>
-    </div>
-
-    <div class="mt-10 flex justify-center reveal">
-      <a href="services-production.html" class="btn-universe btn-universe-production">
-        Voir tous les services Production
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══ WHY BTP ══ -->
-<section class="py-24" id="about">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
-      <!-- Visual -->
-      <div class="why-visual reveal">
-        <div class="why-card why-card-left">
-          <div class="why-card-inner">
-            <div class="why-icon digital-icon">⚡</div>
-            <p class="why-card-title text-digital">Visibilité digitale</p>
-            <p class="why-card-stat">+340% de trafic organique moyen</p>
-          </div>
-        </div>
-        <div class="why-card why-card-right">
-          <div class="why-card-inner">
-            <div class="why-icon prod-icon">🎬</div>
-            <p class="why-card-title text-prod">Impact visuel</p>
-            <p class="why-card-stat">+60% de devis supplémentaires</p>
-          </div>
-        </div>
-        <div class="why-center-badge">
-          <span class="font-display font-bold text-lg text-white">BTP</span>
+        <div class="hero-label hero-label-cinema">
+          <span class="hero-label-num">02</span>
+          <span>Univers Cinéma</span>
+          <span>Film · Drone · Timelapse</span>
         </div>
       </div>
 
-      <!-- Texte -->
-      <div class="reveal">
-        <div class="universe-tag-section tag-neutral mb-6">
-          À propos de TBO Studio
-        </div>
-        <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mb-6">
-          Deux expertises.<br>
-          <span class="dual-gradient-text">Un seul objectif.</span>
-        </h2>
-        <p class="text-muted leading-relaxed mb-5 font-light">
-          Dans le BTP, la qualité du travail ne suffit plus. Vos prospects vous cherchent sur Google, évaluent votre crédibilité sur votre site, et sont convaincus par vos réalisations visuelles.
+      <!-- CENTER -->
+      <div class="hero-center">
+        <div class="hero-marker">Cosmic Chaos Production · MMXXVI</div>
+        <h1 class="hero-headline">
+          <span class="hero-headline-line">On capte.</span>
+          <span class="hero-headline-line italic">On monte.</span>
+          <span class="hero-headline-line">On livre.</span>
+        </h1>
+        <p class="hero-tagline">
+          Studio créatif dual. Marketing cosmique et cinéma cinématique.<br>
+          Glissez la barre pour choisir votre univers.
         </p>
-        <p class="text-muted leading-relaxed mb-8 font-light">
-          TBO Studio est la seule agence qui combine communication digitale <span class="text-digital font-medium">ET</span> production visuelle professionnelle. Résultat : une présence en ligne cohérente, des contenus qui impressionnent, et un flux constant de nouveaux clients.
-        </p>
-        <div class="grid grid-cols-2 gap-4 mb-8">
-          <div class="about-pill about-pill-digital">
-            <span class="text-digital font-bold text-2xl font-display">12</span>
-            <span class="text-muted text-sm">mois pour transformer votre visibilité</span>
-          </div>
-          <div class="about-pill about-pill-prod">
-            <span class="text-prod font-bold text-2xl font-display">×3</span>
-            <span class="text-muted text-sm">votre retour sur investissement moyen</span>
-          </div>
-        </div>
-        <a href="projet.html" class="btn-dual">
-          Démarrer maintenant
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </div>
+
+      <!-- BOTTOM -->
+      <div class="hero-bottom">
+        <a href="cinema.html" class="hero-cta" id="hero-cta">
+          <span class="hero-cta-label">Entrer dans l'univers Cinéma</span>
+          <span class="arrow"></span>
         </a>
+        <div class="hero-scroll">Scroll</div>
       </div>
+
+    </div>
+
+    <!-- LAYER 4 : Slider line -->
+    <div class="hero-slider" aria-hidden="true"></div>
+
+    <!-- LAYER 5 : Draggable handle -->
+    <button class="hero-handle" id="hero-handle" aria-label="Glisser pour choisir un univers" tabindex="0">
+      <div class="hero-handle-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18l-6-6 6-6"/>
+        </svg>
+        <div class="bar"></div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l6-6-6-6"/>
+        </svg>
+      </div>
+    </button>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       TICKER
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="ticker-item"><span class="dot purple"></span>Branding</span>
+      <span class="ticker-item"><span class="dot cyan"></span>Stratégie digitale</span>
+      <span class="ticker-item"><span class="dot red"></span>Films de marque</span>
+      <span class="ticker-item"><span class="dot gold"></span>Vidéo drone</span>
+      <span class="ticker-item"><span class="dot purple"></span>SEO & SEA</span>
+      <span class="ticker-item"><span class="dot red"></span>Timelapse</span>
+      <span class="ticker-item"><span class="dot cyan"></span>Réseaux sociaux</span>
+      <span class="ticker-item"><span class="dot gold"></span>Photographie pro</span>
+      <span class="ticker-item"><span class="dot purple"></span>Sites web</span>
+      <span class="ticker-item"><span class="dot red"></span>Montage cinéma</span>
+      <!-- duplicate for seamless loop -->
+      <span class="ticker-item"><span class="dot purple"></span>Branding</span>
+      <span class="ticker-item"><span class="dot cyan"></span>Stratégie digitale</span>
+      <span class="ticker-item"><span class="dot red"></span>Films de marque</span>
+      <span class="ticker-item"><span class="dot gold"></span>Vidéo drone</span>
+      <span class="ticker-item"><span class="dot purple"></span>SEO & SEA</span>
+      <span class="ticker-item"><span class="dot red"></span>Timelapse</span>
+      <span class="ticker-item"><span class="dot cyan"></span>Réseaux sociaux</span>
+      <span class="ticker-item"><span class="dot gold"></span>Photographie pro</span>
+      <span class="ticker-item"><span class="dot purple"></span>Sites web</span>
+      <span class="ticker-item"><span class="dot red"></span>Montage cinéma</span>
     </div>
   </div>
-</section>
 
-
-<!-- ══ PROCESS ══ -->
-<section class="py-20 bg-surface/30" id="process">
-  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
-    <div class="text-center mb-14 reveal">
-      <div class="universe-tag-section tag-neutral inline-block mb-4">Notre méthode</div>
-      <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">
-        De A à Z, <span class="dual-gradient-text">on s'occupe de tout.</span>
-      </h2>
-    </div>
-    <div class="grid md:grid-cols-4 gap-6 reveal">
-      <div class="process-step">
-        <div class="process-number">01</div>
-        <div class="process-icon">🔍</div>
-        <h3 class="process-title">Audit & Analyse</h3>
-        <p class="process-desc">On analyse votre situation actuelle, vos concurrents et vos opportunités de croissance.</p>
-      </div>
-      <div class="process-step">
-        <div class="process-number">02</div>
-        <div class="process-icon">🎯</div>
-        <h3 class="process-title">Stratégie & Plan</h3>
-        <p class="process-desc">On définit un plan d'action clair avec des objectifs mesurables et un calendrier précis.</p>
-      </div>
-      <div class="process-step">
-        <div class="process-number">03</div>
-        <div class="process-icon">⚙️</div>
-        <h3 class="process-title">Production & Mise en ligne</h3>
-        <p class="process-desc">On crée, filme, optimise et déploie. Vous validez, on exécute.</p>
-      </div>
-      <div class="process-step">
-        <div class="process-number">04</div>
-        <div class="process-icon">📈</div>
-        <h3 class="process-title">Suivi & Optimisation</h3>
-        <p class="process-desc">On suit les résultats et optimisons en continu pour maximiser votre ROI.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══ REALISATIONS (PORTFOLIO) ══ -->
-<section class="py-20" id="realisations">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
-    <div class="text-center mb-14 reveal">
-      <div class="universe-tag-section tag-neutral inline-block mb-4">Réalisations</div>
-      <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">
-        Ils nous ont <span class="dual-gradient-text">fait confiance.</span>
-      </h2>
-    </div>
-    <div class="grid md:grid-cols-3 gap-6 reveal">
-      <div class="real-card">
-        <div class="real-thumb real-thumb-1">
-          <div class="real-badge badge-digital-sm">Communication</div>
-          <div class="real-emoji">🏗️</div>
-        </div>
-        <div class="real-body">
-          <h3 class="real-title">Entreprise gros œuvre — Marseille</h3>
-          <p class="real-desc">Refonte complète site web + SEO local → +280% de visites organiques en 6 mois.</p>
-          <div class="real-tags">
-            <span class="pill pill-digital text-xs">Site web</span>
-            <span class="pill pill-digital text-xs">SEO</span>
-          </div>
-        </div>
-      </div>
-      <div class="real-card">
-        <div class="real-thumb real-thumb-2">
-          <div class="real-badge badge-prod-sm">Production</div>
-          <div class="real-emoji">🚁</div>
-        </div>
-        <div class="real-body">
-          <h3 class="real-title">Promoteur immobilier — Lyon</h3>
-          <p class="real-desc">Timelapse 8 mois + vidéo drone de présentation → 3 lots vendus via le contenu vidéo.</p>
-          <div class="real-tags">
-            <span class="pill pill-production text-xs">Timelapse</span>
-            <span class="pill pill-production text-xs">Drone</span>
-          </div>
-        </div>
-      </div>
-      <div class="real-card">
-        <div class="real-thumb real-thumb-3">
-          <div class="real-badge badge-dual-sm">Pack complet</div>
-          <div class="real-emoji">🏠</div>
-        </div>
-        <div class="real-body">
-          <h3 class="real-title">Artisan charpentier — Toulouse</h3>
-          <p class="real-desc">Site + photos pro + Google Ads → portefeuille clients doublé en 12 mois.</p>
-          <div class="real-tags">
-            <span class="pill pill-digital text-xs">Site web</span>
-            <span class="pill pill-production text-xs">Photo</span>
-            <span class="pill pill-digital text-xs">Ads</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══ TESTIMONIALS ══ -->
-<section class="py-20 bg-surface/30" id="testimonials">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
-    <div class="text-center mb-14 reveal">
-      <div class="universe-tag-section tag-neutral inline-block mb-4">Témoignages</div>
-      <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight">
-        Ce que disent <span class="dual-gradient-text">nos clients.</span>
-      </h2>
-    </div>
-    <div class="grid md:grid-cols-3 gap-6 reveal">
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">« TBO Studio a complètement transformé notre visibilité en ligne. Avant, personne ne nous trouvait sur Google. Aujourd'hui, on reçoit 3 à 4 demandes de devis par semaine directement via le site. »</p>
-        <div class="testi-author">
-          <div class="testi-avatar testi-avatar-digital">T</div>
-          <div>
-            <p class="testi-name">Thomas M.</p>
-            <p class="testi-role">Directeur travaux, Méditerranée BTP</p>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card testi-card-featured">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">« Le timelapse de notre chantier a été partagé plus de 500 fois sur LinkedIn. On a eu des appels de clients qui ont découvert notre travail grâce à cette vidéo. Un investissement qui s'est amorti en une semaine. »</p>
-        <div class="testi-author">
-          <div class="testi-avatar testi-avatar-prod">S</div>
-          <div>
-            <p class="testi-name">Sophie L.</p>
-            <p class="testi-role">Architecte, Cabinet SL Architecture</p>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-quote">« En tant qu'artisan, j'avais du mal à me démarquer. Avec le pack communication + photo de TBO Studio, mon portfolio parle pour moi. Mes devis sont acceptés beaucoup plus facilement maintenant. »</p>
-        <div class="testi-author">
-          <div class="testi-avatar testi-avatar-dual">M</div>
-          <div>
-            <p class="testi-name">Marc D.</p>
-            <p class="testi-role">Artisan plaquiste, Sud-Ouest</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══ CTA BAND ══ -->
-<section class="py-20 relative overflow-hidden">
-  <div class="cta-band-bg" aria-hidden="true"></div>
-  <div class="max-w-4xl mx-auto px-6 lg:px-10 text-center relative z-10 reveal">
-    <span class="universe-tag-section tag-neutral inline-block mb-6">Prêt à vous lancer ?</span>
-    <h2 class="font-display text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
-      Votre chantier mérite<br>d'être vu.<br>
-      <span class="dual-gradient-text">Votre marque mérite<br>d'être entendue.</span>
+  <!-- ══════════════════════════════════════════════════════════════════
+       MANIFESTO
+  ══════════════════════════════════════════════════════════════════════ -->
+  <section class="manifesto">
+    <div class="manifesto-tag reveal">Manifeste</div>
+    <h2 class="manifesto-text reveal reveal-delay-1">
+      Le chaos<br>
+      <span class="italic">c'est notre</span><br>
+      <span class="accent">méthode.</span>
     </h2>
-    <p class="text-muted text-lg mb-10 font-light max-w-xl mx-auto">
-      Audit digital offert — on analyse votre situation et vous proposons un plan d'action concret, sans engagement.
+    <p class="manifesto-sub reveal reveal-delay-2">
+      Pas de modèle. Pas de cadre. Juste deux univers — marketing et cinéma — qui se rentrent dedans pour faire émerger ce que personne d'autre ne sait faire.
     </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="projet.html" class="btn-dual text-base px-8 py-4">
-        Demander mon audit gratuit
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       DUAL UNIVERSE CARDS
+  ══════════════════════════════════════════════════════════════════════ -->
+  <section class="dual">
+    <div class="dual-grid">
+
+      <!-- Marketing -->
+      <a href="marketing.html" class="dual-card dual-card-marketing">
+        <div>
+          <div class="dual-num">01</div>
+          <div class="dual-tag">— Univers Marketing</div>
+          <h3 class="dual-title">Visibilité <span>cosmique.</span></h3>
+          <ul class="dual-list">
+            <li data-num="i.">Stratégie digitale & branding</li>
+            <li data-num="ii.">Réseaux sociaux & content</li>
+            <li data-num="iii.">Sites web & e-commerce</li>
+            <li data-num="iv.">SEO, SEA, campagnes</li>
+          </ul>
+        </div>
+        <span class="dual-cta">Explorer l'univers <span class="arrow"></span></span>
       </a>
-      <a href="tel:+33600000000" class="btn-ghost text-base px-8 py-4">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-        Être rappelé
+
+      <!-- Cinema -->
+      <a href="cinema.html" class="dual-card dual-card-cinema">
+        <div>
+          <div class="dual-num">02</div>
+          <div class="dual-tag">— Univers Cinéma</div>
+          <h3 class="dual-title">Production <span>cinématique.</span></h3>
+          <ul class="dual-list">
+            <li data-num="i.">Films de marque & corporate</li>
+            <li data-num="ii.">Vidéo drone & aérienne</li>
+            <li data-num="iii.">Timelapse longue durée</li>
+            <li data-num="iv.">Photographie pro & post-prod</li>
+          </ul>
+        </div>
+        <span class="dual-cta">Explorer l'univers <span class="arrow"></span></span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       SHOWREEL TEASER
+  ══════════════════════════════════════════════════════════════════════ -->
+  <section class="showreel">
+    <div class="showreel-bg"></div>
+    <div class="showreel-content reveal">
+      <div class="showreel-num">— Showreel 2026</div>
+      <h2 class="showreel-title">
+        Du pixel<br>
+        <span class="italic">au big picture.</span>
+      </h2>
+      <a href="realisations.html" class="showreel-play">
+        <span class="play-icon"></span>
+        Voir le showreel
       </a>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- ══════════════════════════════════════════════════════════════════
+       APPROACH / PROCESS
+  ══════════════════════════════════════════════════════════════════════ -->
+  <section class="approach">
+    <div class="approach-grid">
+      <div class="approach-intro reveal">
+        <h2>Notre<br>méthode.</h2>
+        <p>Quatre étapes, deux univers, un objectif : faire des choses qui marquent.</p>
+        <p>Pas de blabla, pas de roadmap surchargée. On comprend, on crée, on capture, on diffuse.</p>
+      </div>
+      <ol class="approach-steps">
+        <li class="approach-step reveal">
+          <span class="approach-step-num">01 / Diag</span>
+          <div>
+            <h3 class="approach-step-title">Comprendre</h3>
+            <p class="approach-step-desc">On plonge dans votre boîte. Marché, audience, concurrence, objectifs business. Sans ça, le reste ne sert à rien.</p>
+          </div>
+        </li>
+        <li class="approach-step reveal">
+          <span class="approach-step-num">02 / Strat</span>
+          <div>
+            <h3 class="approach-step-title">Créer</h3>
+            <p class="approach-step-desc">Stratégie marketing ou direction artistique cinéma — on construit l'angle créatif qui va vous démarquer.</p>
+          </div>
+        </li>
+        <li class="approach-step reveal">
+          <span class="approach-step-num">03 / Prod</span>
+          <div>
+            <h3 class="approach-step-title">Capturer</h3>
+            <p class="approach-step-desc">Drone, caméra, timelapse, code, design. On produit, on tourne, on monte. Du brut au livrable.</p>
+          </div>
+        </li>
+        <li class="approach-step reveal">
+          <span class="approach-step-num">04 / Push</span>
+          <div>
+            <h3 class="approach-step-title">Diffuser</h3>
+            <p class="approach-step-desc">Lancement, campagnes, mesure. On suit les chiffres, on ajuste, on optimise jusqu'à ce que ça performe.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
 
-<!-- ══ FOOTER ══ -->
-<footer class="border-t border-white/5 pt-16 pb-8">
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
-    <div class="grid md:grid-cols-4 gap-10 mb-12">
-      <!-- Brand -->
-      <div class="md:col-span-1">
-        <a href="/" class="font-display text-2xl font-bold block mb-4">
-          <span class="text-digital">TBO</span><span class="text-light/20 mx-1">·</span><span class="text-light">Studio</span>
-        </a>
-        <p class="text-muted text-sm leading-relaxed font-light">
-          Communication digitale & production visuelle pour le BTP, artisans et promoteurs.
+  <!-- ══════════════════════════════════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════════════════════════════════════ -->
+  <section class="contact-band" id="contact">
+    <div class="contact-tag reveal">— Démarrer un projet</div>
+    <h2 class="contact-headline reveal reveal-delay-1">
+      Parlons<br>
+      <span class="italic">chaos.</span>
+    </h2>
+    <a href="projet.html" class="contact-cta reveal reveal-delay-2">
+      Demander un devis
+      <span class="arrow"></span>
+    </a>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Cosmic Chaos</div>
+        <p class="footer-tagline">
+          Studio créatif dual. Marketing digital cosmique × Production audiovisuelle cinématique.
         </p>
       </div>
-      <!-- Digital -->
-      <div>
-        <p class="text-digital text-xs font-semibold uppercase tracking-widest mb-4">⚡ Communication</p>
-        <ul class="space-y-2 text-sm text-muted">
-          <li><a href="services-communication.html#site-web" class="hover:text-light transition">Création de site web</a></li>
-          <li><a href="services-communication.html#seo" class="hover:text-light transition">Référencement SEO</a></li>
-          <li><a href="services-communication.html#sea" class="hover:text-light transition">Google Ads</a></li>
-          <li><a href="services-communication.html#branding" class="hover:text-light transition">Branding & Réseaux</a></li>
+      <div class="footer-col">
+        <h4>Univers</h4>
+        <ul>
+          <li><a href="marketing.html">Marketing</a></li>
+          <li><a href="cinema.html">Cinéma</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
         </ul>
       </div>
-      <!-- Production -->
-      <div>
-        <p class="text-prod text-xs font-semibold uppercase tracking-widest mb-4">🎥 Production</p>
-        <ul class="space-y-2 text-sm text-muted">
-          <li><a href="services-production.html#drone" class="hover:text-light transition">Vidéo drone</a></li>
-          <li><a href="services-production.html#timelapse" class="hover:text-light transition">Timelapse chantier</a></li>
-          <li><a href="services-production.html#photo" class="hover:text-light transition">Photographie pro</a></li>
-          <li><a href="services-production.html#video" class="hover:text-light transition">Vidéo & Montage</a></li>
+      <div class="footer-col">
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="blog.html">Journal</a></li>
+          <li><a href="projet.html">Devis</a></li>
         </ul>
       </div>
-      <!-- Contact -->
-      <div>
-        <p class="text-light/40 text-xs font-semibold uppercase tracking-widest mb-4">Contact</p>
-        <ul class="space-y-2 text-sm text-muted">
-          <li><a href="mailto:contact@tbo-studio.fr" class="hover:text-light transition">contact@tbo-studio.fr</a></li>
-          <li><a href="blog.html" class="hover:text-light transition">Blog</a></li>
-          <li><a href="projet.html" class="hover:text-light transition">Demande de devis</a></li>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@cosmicchaos.fr">contact@cosmicchaos.fr</a></li>
+          <li><a href="#instagram">Instagram</a></li>
+          <li><a href="#linkedin">LinkedIn</a></li>
         </ul>
       </div>
     </div>
-    <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="text-muted/40 text-xs">&copy; 2026 TBO Studio. Tous droits réservés.</p>
-      <p class="text-muted/30 text-xs">Communication & Production Visuelle BTP · Sud de la France</p>
+    <div class="footer-bottom">
+      <span>© 2026 Cosmic Chaos Production</span>
+      <span>Marketing × Cinéma · France</span>
     </div>
-  </div>
-</footer>
+  </footer>
 
-
-<!-- ══ SCRIPTS ══ -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
-<script>
-  // ── Navbar scroll ──
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
-  }, { passive: true });
-
-  // ── Mobile menu ──
-  document.getElementById('menu-btn')?.addEventListener('click', () => {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
-  });
-
-  // ── Split hero: keyboard nav ──
-  document.getElementById('panelDigital')?.addEventListener('keydown', e => {
-    if (e.key === 'Enter') window.location.href = 'services-communication.html';
-  });
-  document.getElementById('panelProduction')?.addEventListener('keydown', e => {
-    if (e.key === 'Enter') window.location.href = 'services-production.html';
-  });
-
-  // ── Click navigation on panels ──
-  document.getElementById('panelDigital')?.addEventListener('click', e => {
-    if (!e.target.closest('a')) window.location.href = 'services-communication.html';
-  });
-  document.getElementById('panelProduction')?.addEventListener('click', e => {
-    if (!e.target.closest('a')) window.location.href = 'services-production.html';
-  });
-
-  // ── GSAP scroll reveals ──
-  window.addEventListener('load', () => {
-    if (typeof gsap === 'undefined') return;
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Hero entrance via fromTo (état final explicite pour éviter les stuck states)
-    gsap.fromTo('.panel-content',
-      { opacity: 0, y: 40 },
-      { opacity: 1, y: 0, duration: 1.1, stagger: 0.2, ease: 'power3.out', delay: 0.2, clearProps: 'transform,opacity' }
-    );
-
-    // Scroll reveals
-    gsap.utils.toArray('.reveal').forEach(el => {
-      gsap.fromTo(el,
-        { opacity: 0, y: 36 },
-        {
-          scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' },
-          opacity: 1, y: 0, duration: 0.9, ease: 'power3.out'
-        }
-      );
-    });
-  });
-</script>
+  <!-- ══════════════════════════════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════════════════════════════════ -->
+  <script src="assets/js/cosmic.js" defer></script>
 
 </body>
 </html>
