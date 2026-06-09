@@ -209,6 +209,9 @@ button { font: inherit; background: none; border: none; color: inherit; cursor: 
   height: 100%;
   object-fit: cover;
   filter: brightness(0.62) contrast(1.12) saturate(0.85);
+}
+/* Zoom animation uniquement sur les images placeholder (la vidéo a déjà du mouvement) */
+.hero-cinema img {
   animation: cinemaZoom 32s ease-in-out infinite alternate;
 }
 @keyframes cinemaZoom {
