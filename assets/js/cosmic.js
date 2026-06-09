@@ -19,41 +19,8 @@
   }
 
   /* ─────────────────────────────────────────────────────────────────
-     2. CURSOR follower (desktop only)
+     2. CURSOR follower (désactivé sur demande)
   ───────────────────────────────────────────────────────────────── */
-  const dot = document.querySelector('.cursor-dot');
-  if (dot && window.matchMedia('(pointer: fine)').matches) {
-    let x = window.innerWidth / 2;
-    let y = window.innerHeight / 2;
-    let tx = x, ty = y;
-    window.addEventListener('mousemove', (e) => {
-      x = e.clientX;
-      y = e.clientY;
-    });
-    const animate = () => {
-      tx += (x - tx) * 0.18;
-      ty += (y - ty) * 0.18;
-      dot.style.transform = `translate(${tx}px, ${ty}px) translate(-50%, -50%)`;
-      requestAnimationFrame(animate);
-    };
-    animate();
-
-    // Larger dot on interactive elements
-    document.querySelectorAll('a, button, .hero-handle').forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        dot.style.width = '40px';
-        dot.style.height = '40px';
-        dot.style.background = 'transparent';
-        dot.style.border = '1px solid #fff';
-      });
-      el.addEventListener('mouseleave', () => {
-        dot.style.width = '8px';
-        dot.style.height = '8px';
-        dot.style.background = '#F2EFE8';
-        dot.style.border = 'none';
-      });
-    });
-  }
 
   /* ─────────────────────────────────────────────────────────────────
      3. HERO SLIDER — before/after drag interaction
