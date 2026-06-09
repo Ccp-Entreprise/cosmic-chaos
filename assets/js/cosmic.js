@@ -27,6 +27,7 @@
   ───────────────────────────────────────────────────────────────── */
   const hero = document.getElementById('hero');
   const handle = document.getElementById('hero-handle');
+  // CTA bouton supprimé (remplacé par les edge selectors cliquables)
   const ctaLabel = document.querySelector('#hero-cta .hero-cta-label');
   const ctaLink = document.getElementById('hero-cta');
 
@@ -79,15 +80,17 @@
         cancelNavigation();
       }
 
-      // CTA dynamique selon position
-      if (pos < 50) {
-        ctaLabel.textContent = "Entrer dans l'univers Cinéma";
-        ctaLink.setAttribute('href', 'cinema.html');
-        ctaLink.dataset.universe = 'cinema';
-      } else {
-        ctaLabel.textContent = "Entrer dans l'univers Marketing";
-        ctaLink.setAttribute('href', 'marketing.html');
-        ctaLink.dataset.universe = 'marketing';
+      // CTA dynamique (gardé pour rétro-compat, mais le CTA est supprimé)
+      if (ctaLabel && ctaLink) {
+        if (pos < 50) {
+          ctaLabel.textContent = "Entrer dans l'univers Cinéma";
+          ctaLink.setAttribute('href', 'cinema.html');
+          ctaLink.dataset.universe = 'cinema';
+        } else {
+          ctaLabel.textContent = "Entrer dans l'univers Marketing";
+          ctaLink.setAttribute('href', 'marketing.html');
+          ctaLink.dataset.universe = 'marketing';
+        }
       }
     };
 
@@ -125,8 +128,8 @@
 
     // Click anywhere on hero to teleport handle
     hero.addEventListener('click', (e) => {
-      // Don't teleport if clicking on the CTA or interactive elements
-      if (e.target.closest('.hero-content a, .hero-content button, .hero-handle, .nav, .hero-scroll')) return;
+      // Don't teleport if clicking on the CTA, edge selectors, or interactive elements
+      if (e.target.closest('.hero-content a, .hero-content button, .hero-handle, .nav, .hero-edge')) return;
       setPosition(getPositionFromEvent(e));
     });
 

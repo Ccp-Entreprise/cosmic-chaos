@@ -106,22 +106,6 @@
 
     <!-- LAYER 3 : Centered content -->
     <div class="hero-content">
-
-      <!-- TOP labels -->
-      <div class="hero-labels">
-        <div class="hero-label hero-label-marketing">
-          <span class="hero-label-num">01</span>
-          <span>Univers Marketing</span>
-          <span>Cosmic · Digital · Brand</span>
-        </div>
-        <div class="hero-label hero-label-cinema">
-          <span class="hero-label-num">02</span>
-          <span>Univers Cinéma</span>
-          <span>Film · Drone · Timelapse</span>
-        </div>
-      </div>
-
-      <!-- CENTER -->
       <div class="hero-center">
         <div class="hero-marker">Cosmic Chaos Production · MMXXVI</div>
         <h1 class="hero-headline">
@@ -130,21 +114,38 @@
           <span class="hero-headline-line">On livre.</span>
         </h1>
         <p class="hero-tagline">
-          Studio créatif dual. Marketing cosmique et cinéma cinématique.<br>
-          Glissez la barre pour choisir votre univers.
+          Studio créatif dual.<br>
+          Glissez ou cliquez d'un côté pour entrer dans un univers.
         </p>
       </div>
-
-      <!-- BOTTOM -->
-      <div class="hero-bottom">
-        <a href="cinema.html" class="hero-cta" id="hero-cta">
-          <span class="hero-cta-label">Entrer dans l'univers Cinéma</span>
-          <span class="arrow"></span>
-        </a>
-        <div class="hero-hint">Glissez jusqu'au bout pour entrer →</div>
-      </div>
-
     </div>
+
+    <!-- LAYER 3b : Edge selectors (cliquables + flèches animées) -->
+    <a href="cinema.html" class="hero-edge hero-edge-left" aria-label="Entrer dans l'univers Cinéma">
+      <div class="hero-edge-arrows hero-edge-arrows-left">
+        <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="hero-edge-info">
+        <div class="hero-edge-tag">Univers 02</div>
+        <div class="hero-edge-label">Cinéma</div>
+        <div class="hero-edge-services">Drone · Timelapse · Films · Photo</div>
+      </div>
+    </a>
+
+    <a href="marketing.html" class="hero-edge hero-edge-right" aria-label="Entrer dans l'univers Marketing">
+      <div class="hero-edge-info">
+        <div class="hero-edge-tag">Univers 01</div>
+        <div class="hero-edge-label">Marketing</div>
+        <div class="hero-edge-services">Branding · Web · SEO · Social</div>
+      </div>
+      <div class="hero-edge-arrows hero-edge-arrows-right">
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </a>
 
     <!-- LAYER 4 : Slider line -->
     <div class="hero-slider" aria-hidden="true"></div>

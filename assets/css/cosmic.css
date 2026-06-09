@@ -471,23 +471,121 @@ button { font: inherit; background: none; border: none; color: inherit; cursor: 
   50% { transform: scaleY(1.3); opacity: 0.9; }
 }
 
-/* Hint instruction sous le hero */
-.hero-hint {
+/* ── EDGE SELECTORS (clickable banners with animated arrows) ── */
+.hero-edge {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 28px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.4s var(--ease-out-expo);
+  max-width: 320px;
+}
+.hero-edge:hover {
+  background: rgba(0, 0, 0, 0.78);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.hero-edge-left {
+  left: 32px;
+}
+.hero-edge-right {
+  right: 32px;
+  text-align: right;
+}
+.hero-edge-left:hover { transform: translateY(-50%) translateX(-8px); }
+.hero-edge-right:hover { transform: translateY(-50%) translateX(8px); }
+
+.hero-edge-info { flex: 1; }
+.hero-edge-tag {
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.2em;
+  font-size: 10px;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--ink-mute);
-  padding: 14px 18px;
-  border: 1px solid var(--ink-faint);
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  animation: hintPulse 3s ease-in-out infinite;
+  margin-bottom: 4px;
 }
-@keyframes hintPulse {
-  0%, 100% { opacity: 0.7; }
-  50% { opacity: 1; }
+.hero-edge-label {
+  font-family: var(--font-display);
+  font-size: 38px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.hero-edge-left .hero-edge-label { color: var(--cinema-cream); }
+.hero-edge-right .hero-edge-label { color: var(--marketing-purple-bright); }
+
+.hero-edge-services {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+/* Animated arrows (chevrons) */
+.hero-edge-arrows {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.hero-edge-arrows svg {
+  width: 22px;
+  height: 22px;
+}
+.hero-edge-arrows-left svg { animation: chevSweepLeft 1.4s ease-in-out infinite; }
+.hero-edge-arrows-right svg { animation: chevSweepRight 1.4s ease-in-out infinite; }
+.hero-edge-arrows svg:nth-child(2) { animation-delay: 0.15s; }
+.hero-edge-arrows svg:nth-child(3) { animation-delay: 0.3s; }
+
+.hero-edge-left .hero-edge-arrows svg { color: var(--marketing-cyan); }
+.hero-edge-right .hero-edge-arrows svg { color: var(--marketing-purple); }
+
+@keyframes chevSweepLeft {
+  0%, 100% { transform: translateX(0); opacity: 0.35; }
+  50% { transform: translateX(-8px); opacity: 1; }
+}
+@keyframes chevSweepRight {
+  0%, 100% { transform: translateX(0); opacity: 0.35; }
+  50% { transform: translateX(8px); opacity: 1; }
+}
+
+/* Quand le slider approche la zone d'entrée, le edge associé pulse */
+.hero.threshold-cinema .hero-edge-left {
+  background: rgba(0, 224, 255, 0.18);
+  border-color: var(--marketing-cyan);
+  transform: translateY(-50%) translateX(-12px) scale(1.04);
+}
+.hero.threshold-marketing .hero-edge-right {
+  background: rgba(157, 92, 255, 0.2);
+  border-color: var(--marketing-purple);
+  transform: translateY(-50%) translateX(12px) scale(1.04);
+}
+
+@media (max-width: 1024px) {
+  .hero-edge-label { font-size: 28px; }
+  .hero-edge { padding: 16px 20px; gap: 14px; max-width: 240px; }
+  .hero-edge-left { left: 20px; }
+  .hero-edge-right { right: 20px; }
+  .hero-edge-arrows svg { width: 18px; height: 18px; }
+}
+@media (max-width: 768px) {
+  .hero-edge { padding: 12px 14px; gap: 8px; max-width: 150px; }
+  .hero-edge-label { font-size: 20px; }
+  .hero-edge-tag { font-size: 8px; }
+  .hero-edge-services { font-size: 8px; }
+  .hero-edge-left { left: 12px; }
+  .hero-edge-right { right: 12px; }
+  .hero-edge-arrows svg { width: 14px; height: 14px; }
 }
 
 /* ── SLIDER HANDLE ── */
