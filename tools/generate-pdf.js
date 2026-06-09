@@ -19,7 +19,7 @@ const path = require('path');
     });
   });
 
-  const outputPath = path.resolve(__dirname, 'audit-template-tbo-studio.pdf');
+  const outputPath = path.resolve(__dirname, 'audit-template-cosmic-chaos-production.pdf');
   await page.pdf({
     path: outputPath,
     format: 'A4',
