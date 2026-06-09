@@ -33,23 +33,53 @@
   if (hero && handle) {
     let isDragging = false;
     let position = 50; // % from left
+    let navigating = false;
+    let navTimer = null;
+
+    const NAV_THRESHOLD_CINEMA = 10;   // pos <= 10% → navigate to cinema
+    const NAV_THRESHOLD_MARKETING = 90; // pos >= 90% → navigate to marketing
+    const NAV_DELAY = 450; // ms delay before navigation (smooth UX)
+
+    const navigateTo = (url, universe) => {
+      if (navigating) return;
+      navigating = true;
+      // Visual cue : full immersion
+      document.body.classList.add(`navigating-${universe}`);
+      hero.classList.add('hero-departing');
+      navTimer = setTimeout(() => {
+        window.location.href = url;
+      }, NAV_DELAY);
+    };
+
+    const cancelNavigation = () => {
+      if (!navigating) return;
+      navigating = false;
+      clearTimeout(navTimer);
+      document.body.classList.remove('navigating-cinema', 'navigating-marketing');
+      hero.classList.remove('hero-departing');
+    };
 
     const setPosition = (pos) => {
       pos = Math.max(0, Math.min(100, pos));
       position = pos;
       hero.style.setProperty('--slider-pos', `${pos}%`);
 
-      // Dynamic CTA :
-      // pos < 50%  → bar côté MARKETING (cinéma dominant à droite, marketing à gauche)
-      //              → user is on cinema side → "Entrer Cinéma"
-      // pos >= 50% → bar côté CINÉMA (marketing dominant à gauche, étendu vers droite)
-      //              → user is on marketing side → "Entrer Marketing"
-      //
-      // Interprétation choisie : la barre EST sur le côté correspondant.
-      // - Barre poussée vers la gauche (côté marketing au sens spatial) =
-      //   marketing est minimisé, cinéma occupe le reste → "Entrer Cinéma"
-      // - Barre poussée vers la droite (côté cinéma au sens spatial) =
-      //   marketing prend toute la place, cinéma est caché → "Entrer Marketing"
+      // Approche de la zone d'entrée — feedback visuel
+      const inCinemaZone = pos <= NAV_THRESHOLD_CINEMA;
+      const inMarketingZone = pos >= NAV_THRESHOLD_MARKETING;
+      hero.classList.toggle('threshold-cinema', inCinemaZone);
+      hero.classList.toggle('threshold-marketing', inMarketingZone);
+
+      // Auto-nav au franchissement
+      if (inCinemaZone) {
+        navigateTo('cinema.html', 'cinema');
+      } else if (inMarketingZone) {
+        navigateTo('marketing.html', 'marketing');
+      } else {
+        cancelNavigation();
+      }
+
+      // CTA dynamique selon position
       if (pos < 50) {
         ctaLabel.textContent = "Entrer dans l'univers Cinéma";
         ctaLink.setAttribute('href', 'cinema.html');

@@ -51,6 +51,15 @@ body {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
+/* Homepage uniquement : single-page selector sans scroll */
+body.home {
+  overflow: hidden;
+  height: 100vh;
+}
+/* Transition de sortie au franchissement de seuil */
+body.navigating-cinema, body.navigating-marketing {
+  transition: opacity 0.4s ease;
+}
 
 ::selection { background: var(--marketing-purple); color: #fff; }
 
@@ -195,7 +204,31 @@ button { font: inherit; background: none; border: none; color: inherit; cursor: 
   background: #000;
   cursor: ew-resize;
   user-select: none;
+  transition: filter 0.45s ease;
 }
+
+/* Approche zone d'entrée — feedback subtil */
+.hero.threshold-cinema .hero-handle,
+.hero.threshold-marketing .hero-handle {
+  transform: translate(-50%, -50%) scale(1.25);
+  border-color: var(--marketing-cyan);
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 60px 8px rgba(0, 224, 255, 0.35);
+}
+.hero.threshold-marketing .hero-handle {
+  border-color: var(--marketing-purple);
+  box-shadow: 0 0 60px 8px rgba(157, 92, 255, 0.4);
+}
+
+/* Transition de sortie : zoom dans l'univers choisi */
+.hero.hero-departing {
+  animation: heroDepart 0.45s cubic-bezier(0.7, 0, 0.84, 0) forwards;
+}
+@keyframes heroDepart {
+  to { transform: scale(1.08); filter: brightness(1.3) blur(8px); opacity: 0; }
+}
+.hero.hero-departing .hero-content { opacity: 0; transition: opacity 0.25s ease; }
+.hero.hero-departing .hero-handle { transform: translate(-50%, -50%) scale(2); opacity: 0; transition: all 0.4s ease; }
 
 /* ── Cinema layer (background video) ── */
 .hero-cinema {
@@ -436,6 +469,25 @@ button { font: inherit; background: none; border: none; color: inherit; cursor: 
 @keyframes scrollLine {
   0%, 100% { transform: scaleY(1); transform-origin: bottom; opacity: 0.4; }
   50% { transform: scaleY(1.3); opacity: 0.9; }
+}
+
+/* Hint instruction sous le hero */
+.hero-hint {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  padding: 14px 18px;
+  border: 1px solid var(--ink-faint);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: hintPulse 3s ease-in-out infinite;
+}
+@keyframes hintPulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
 }
 
 /* ── SLIDER HANDLE ── */
