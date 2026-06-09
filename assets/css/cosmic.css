@@ -67,19 +67,8 @@ button { font: inherit; background: none; border: none; color: inherit; cursor: 
   background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
 
-/* ── Cursor custom ── */
-.cursor-dot {
-  position: fixed;
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: var(--ink);
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s, height 0.3s, background 0.3s, opacity 0.3s;
-  mix-blend-mode: difference;
-}
-@media (pointer: coarse) { .cursor-dot { display: none; } }
+/* ── Cursor custom (désactivé sur demande) ── */
+.cursor-dot { display: none !important; }
 
 /* ══════════════════════════════════════════════════════════════════════
    NAVBAR
