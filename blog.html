@@ -181,10 +181,15 @@
   <section class="newsletter">
     <h2>Recevez<br><span class="italic">le signal.</span></h2>
     <p>Un mail par mois max. Les derniers projets, méthodes et coulisses. Pas de spam, jamais.</p>
-    <form class="newsletter-form" id="nl-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Inscrit ✓'; this.querySelector('input').value='';">
-      <input type="email" placeholder="votre@email.fr" required />
+    <form class="newsletter-form" id="nl-form">
+      <input type="hidden" name="access_key" value="a0eacd06-c55c-4e09-8756-c4df1b4c2abc" />
+      <input type="hidden" name="from_name" value="Cosmic Chaos — Newsletter" />
+      <input type="hidden" name="subject" value="Nouvelle inscription newsletter — Cosmic Chaos" />
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+      <input type="email" name="email" placeholder="votre@email.fr" required />
       <button type="submit">S'abonner</button>
     </form>
+    <p id="nl-feedback" style="margin-top:18px;font-family:var(--font-mono);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--marketing-cyan);min-height:14px;"></p>
   </section>
 
   <footer class="footer">
@@ -202,12 +207,51 @@
 
   <script src="assets/js/cosmic.js" defer></script>
   <script>
+    // Filter pills
     document.querySelectorAll('.filter-pill').forEach(p => {
       p.addEventListener('click', () => {
         document.querySelectorAll('.filter-pill').forEach(x => x.classList.remove('active'));
         p.classList.add('active');
       });
     });
+
+    // Newsletter Web3Forms
+    (function () {
+      const form = document.getElementById('nl-form');
+      const btn = form.querySelector('button');
+      const feedback = document.getElementById('nl-feedback');
+      const email = form.querySelector('input[type=email]');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        btn.disabled = true;
+        btn.textContent = 'Envoi...';
+        feedback.style.color = 'var(--ink-mute)';
+        feedback.textContent = '';
+
+        const fd = new FormData(form);
+        fd.set('message', 'Nouvelle inscription newsletter : ' + (fd.get('email') || ''));
+
+        try {
+          const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
+          const data = await res.json();
+          if (data.success) {
+            email.value = '';
+            btn.textContent = 'Inscrit ✓';
+            feedback.style.color = 'var(--marketing-cyan)';
+            feedback.textContent = '◆ Bienvenue dans le signal';
+            setTimeout(() => { btn.textContent = "S'abonner"; btn.disabled = false; feedback.textContent = ''; }, 5000);
+          } else {
+            throw new Error(data.message || 'Erreur');
+          }
+        } catch (err) {
+          feedback.style.color = '#ff6b6b';
+          feedback.textContent = '✗ ' + err.message;
+          btn.textContent = "S'abonner";
+          btn.disabled = false;
+        }
+      });
+    })();
   </script>
 </body>
 </html>
