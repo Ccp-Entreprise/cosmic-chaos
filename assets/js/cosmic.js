@@ -97,9 +97,7 @@
     hero.addEventListener('click', (e) => {
       // Don't teleport if clicking on the CTA or interactive elements
       if (e.target.closest('.hero-content a, .hero-content button, .hero-handle, .nav, .hero-scroll')) return;
-      const pos = getPositionFromEvent(e);
-      hero.style.setProperty('transition', 'none');
-      setPosition(pos);
+      setPosition(getPositionFromEvent(e));
     });
 
     // Keyboard support

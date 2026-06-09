@@ -235,7 +235,7 @@ button { font: inherit; background: none; border: none; color: inherit; cursor: 
   z-index: 2;
   background: linear-gradient(135deg, var(--marketing-bg) 0%, #1a0a3d 40%, #0a0626 100%);
   clip-path: inset(0 calc(100% - var(--slider-pos, 50%)) 0 0);
-  transition: clip-path 0.06s linear;
+  /* Pas de transition : suit instantanément la souris */
 }
 .hero-marketing::before {
   /* Stars layer 1 */
@@ -472,7 +472,8 @@ button { font: inherit; background: none; border: none; color: inherit; cursor: 
 
 .hero-handle {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: var(--slider-pos, 50%); /* Suit la barre */
   transform: translate(-50%, -50%);
   width: 80px; height: 80px;
   border-radius: 50%;
@@ -485,7 +486,8 @@ button { font: inherit; background: none; border: none; color: inherit; cursor: 
   justify-content: center;
   pointer-events: auto;
   cursor: ew-resize;
-  transition: transform 0.5s var(--ease-out-expo), border-color 0.3s, background 0.3s;
+  /* Transform pour scale au hover (la position via left n'a pas de transition = suivi 1:1) */
+  transition: transform 0.25s var(--ease-out-expo), border-color 0.3s, background 0.3s;
   z-index: 6;
 }
 .hero-handle:hover {
