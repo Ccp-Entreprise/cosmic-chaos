@@ -91,15 +91,17 @@ button { font: inherit; background: none; border: none; color: inherit; cursor: 
   align-items: center;
   justify-content: space-between;
   transition: padding 0.5s var(--ease-out-expo), background 0.5s ease;
-  mix-blend-mode: difference;
 }
 .nav.scrolled {
   padding: 18px 40px;
-  mix-blend-mode: normal;
   background: rgba(4, 2, 15, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--ink-faint);
+}
+/* Lisibilité sur fonds vidéo : ombre subtile sur le texte du nav */
+.nav-logo-text, .nav-link {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .nav-logo {
@@ -164,15 +166,18 @@ button { font: inherit; background: none; border: none; color: inherit; cursor: 
   font-size: 13px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  background: var(--ink);
-  color: #000;
+  background: linear-gradient(90deg, var(--marketing-purple) 0%, var(--marketing-cyan) 100%);
+  color: #04020F;
   padding: 14px 24px;
+  border: none;
   transition: all 0.3s var(--ease-out-expo);
-  border: 1px solid var(--ink);
+  box-shadow: 0 8px 24px rgba(157, 92, 255, 0.35), 0 4px 12px rgba(0, 224, 255, 0.2);
+  font-weight: 400;
 }
 .nav-cta:hover {
-  background: transparent;
-  color: var(--ink);
+  filter: brightness(1.12);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(157, 92, 255, 0.5), 0 6px 16px rgba(0, 224, 255, 0.3);
 }
 
 .nav-burger {
