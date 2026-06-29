@@ -266,12 +266,16 @@ button { font: inherit; background: none; border: none; color: inherit; cursor: 
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: linear-gradient(135deg, var(--marketing-bg) 0%, #1a0a3d 40%, #0a0626 100%);
+  background:
+    /* Color tint to maintain brand palette */
+    linear-gradient(135deg, rgba(4, 2, 15, 0.55) 0%, rgba(26, 10, 61, 0.35) 40%, rgba(10, 6, 38, 0.6) 100%),
+    /* Real photo : cosmic nebula */
+    url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2400&q=85&auto=format&fit=crop') center/cover no-repeat;
   clip-path: inset(0 calc(100% - var(--slider-pos, 50%)) 0 0);
   /* Pas de transition : suit instantanément la souris */
 }
 .hero-marketing::before {
-  /* Stars layer 1 */
+  /* Stars layer (atténué pour ne pas fighter avec la photo) */
   content: '';
   position: absolute; inset: 0;
   background-image:
@@ -285,7 +289,7 @@ button { font: inherit; background: none; border: none; color: inherit; cursor: 
     radial-gradient(1.5px 1.5px at 11% 91%, #fff, transparent),
     radial-gradient(1px 1px at 33% 49%, #fff, transparent),
     radial-gradient(1px 1px at 7% 37%, #c4b8ff, transparent);
-  opacity: 0.85;
+  opacity: 0.5;
   animation: twinkle 8s ease-in-out infinite;
 }
 .hero-marketing::after {
