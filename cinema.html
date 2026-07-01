@@ -84,8 +84,23 @@
       position: relative;
       overflow: hidden;
       transition: background 0.5s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      cursor: pointer;
     }
     .format-card:hover { background: #050403; }
+    .format-card:hover .format-cta { color: var(--cinema-warm); }
+    .format-cta {
+      display: inline-block;
+      margin-top: 32px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      transition: color 0.3s ease;
+    }
     .format-card::before {
       content: '';
       position: absolute;
@@ -167,7 +182,7 @@
   </section>
 
   <section class="formats-grid">
-    <div class="format-card">
+    <a href="films.html" class="format-card">
       <div class="format-num">01 / Film</div>
       <h2 class="format-title">Films de marque</h2>
       <p class="format-desc">Vidéos corporate, films de produit, brand stories. Écriture, tournage, montage, étalonnage.</p>
@@ -176,8 +191,9 @@
         <span>Cadrage + interview</span>
         <span>Post-prod incluse</span>
       </div>
-    </div>
-    <div class="format-card">
+      <span class="format-cta">Découvrir le service →</span>
+    </a>
+    <a href="drone.html" class="format-card">
       <div class="format-num">02 / Drone</div>
       <h2 class="format-title">Vidéo drone</h2>
       <p class="format-desc">Captation aérienne pour événement, immobilier, industrie, sport. Pilotes télécommandés certifiés.</p>
@@ -186,8 +202,9 @@
         <span>Pilote breveté DGAC</span>
         <span>Assurance pro</span>
       </div>
-    </div>
-    <div class="format-card">
+      <span class="format-cta">Découvrir le service →</span>
+    </a>
+    <a href="timelapse.html" class="format-card">
       <div class="format-num">03 / Timelapse</div>
       <h2 class="format-title">Timelapse pro</h2>
       <p class="format-desc">Captation longue durée pour construction, événementiel, nature. Caméras dédiées en autonomie.</p>
@@ -196,8 +213,9 @@
         <span>De 1 jour à 18 mois</span>
         <span>Hosting + streaming</span>
       </div>
-    </div>
-    <div class="format-card">
+      <span class="format-cta">Découvrir le service →</span>
+    </a>
+    <a href="photo.html" class="format-card">
       <div class="format-num">04 / Photo</div>
       <h2 class="format-title">Photographie</h2>
       <p class="format-desc">Reportage corporate, packshot produit, portrait, événementiel. Tirage et retouche fine.</p>
@@ -206,7 +224,8 @@
         <span>Studio ou extérieur</span>
         <span>Retouche pro</span>
       </div>
-    </div>
+      <span class="format-cta">Découvrir le service →</span>
+    </a>
   </section>
 
   <section class="contact-band" id="contact">

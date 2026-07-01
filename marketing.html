@@ -89,8 +89,24 @@
       background: #04020F;
       padding: 60px 50px;
       transition: background 0.5s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      cursor: pointer;
+      position: relative;
     }
     .service-card:hover { background: #0a0626; }
+    .service-card:hover .service-cta { color: var(--marketing-cyan); }
+    .service-cta {
+      display: inline-block;
+      margin-top: 32px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      transition: color 0.3s ease;
+    }
     .service-num {
       font-family: var(--font-mono);
       font-size: 11px;
@@ -164,7 +180,7 @@
   </section>
 
   <section class="services-grid">
-    <div class="service-card">
+    <a href="branding.html" class="service-card">
       <div class="service-num">01 / Branding</div>
       <h2 class="service-title">Identité de marque</h2>
       <p class="service-desc">Logo, charte, ton, plateforme de marque. On construit une identité qui se voit, se reconnaît, se retient.</p>
@@ -174,8 +190,9 @@
         <span class="service-tag">Brandbook</span>
         <span class="service-tag">Naming</span>
       </div>
-    </div>
-    <div class="service-card">
+      <span class="service-cta">Découvrir le service →</span>
+    </a>
+    <a href="sites-web.html" class="service-card">
       <div class="service-num">02 / Digital</div>
       <h2 class="service-title">Sites web sur mesure</h2>
       <p class="service-desc">Vitrine, e-commerce, landing pages. Du design qui claque, du code propre, des perfs solides.</p>
@@ -185,8 +202,9 @@
         <span class="service-tag">Landing</span>
         <span class="service-tag">Webflow / custom</span>
       </div>
-    </div>
-    <div class="service-card">
+      <span class="service-cta">Découvrir le service →</span>
+    </a>
+    <a href="seo-sea.html" class="service-card">
       <div class="service-num">03 / Acquisition</div>
       <h2 class="service-title">SEO & SEA</h2>
       <p class="service-desc">Référencement naturel, Google Ads, Meta Ads. On va chercher vos clients là où ils sont déjà.</p>
@@ -196,8 +214,9 @@
         <span class="service-tag">Meta Ads</span>
         <span class="service-tag">Analytics</span>
       </div>
-    </div>
-    <div class="service-card">
+      <span class="service-cta">Découvrir le service →</span>
+    </a>
+    <a href="social-media.html" class="service-card">
       <div class="service-num">04 / Social</div>
       <h2 class="service-title">Content & réseaux</h2>
       <p class="service-desc">Stratégie social media, création de contenu, gestion communautaire. On occupe le terrain.</p>
@@ -207,7 +226,8 @@
         <span class="service-tag">TikTok</span>
         <span class="service-tag">Content</span>
       </div>
-    </div>
+      <span class="service-cta">Découvrir le service →</span>
+    </a>
   </section>
 
   <section class="contact-band" id="contact">
