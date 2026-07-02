@@ -230,6 +230,66 @@
     </a>
   </section>
 
+  <!-- CHIFFRES CLÉS -->
+  <section class="stats-band">
+    <div class="stats-band-inner">
+      <div class="section-label">Chiffres qui parlent</div>
+      <h2 class="section-heading">Ce qui nous <span class="italic">définit.</span></h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-num">6<span class="stat-num-suffix">ans</span></div>
+          <div class="stat-label">D'expérience terrain</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">2</div>
+          <div class="stat-label">Univers combinés<br>marketing × cinéma</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">24<span class="stat-num-suffix">h</span></div>
+          <div class="stat-label">Retour sur devis<br>toujours tenu</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100<span class="stat-num-suffix">%</span></div>
+          <div class="stat-label">Production interne<br>zéro sous-traitance opaque</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTEURS -->
+  <section class="sectors-band">
+    <div class="sectors-band-inner">
+      <div class="section-label">Secteurs qu'on connaît</div>
+      <h2 class="section-heading">On travaille pour <span class="italic">celles et ceux qui construisent.</span></h2>
+      <div class="sectors-list">
+        <span class="sector-tag">Immobilier</span>
+        <span class="sector-tag">Retail &amp; e-commerce</span>
+        <span class="sector-tag">Restauration</span>
+        <span class="sector-tag">Hôtellerie</span>
+        <span class="sector-tag">Événementiel</span>
+        <span class="sector-tag">Industrie &amp; BTP</span>
+        <span class="sector-tag">Professions libérales</span>
+        <span class="sector-tag">Startups &amp; tech</span>
+        <span class="sector-tag">Institutions</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ UNIVERS -->
+  <section class="universe-faq-band">
+    <div class="universe-faq-band-inner">
+      <div class="section-label">Questions fréquentes</div>
+      <h2 class="section-heading">Avant de <span class="italic">se lancer.</span></h2>
+      <div class="faq-list">
+        <div class="faq-item"><div class="faq-question">Pourquoi un studio dual (marketing + cinéma) ?</div><div class="faq-answer">Parce que 90% des projets marketing sérieux ont besoin de contenu visuel pro. Externaliser la vidéo à un autre prestataire = perte de temps, incohérence et surcoût. Chez nous, marketing et production visuelle sont sous le même toit — cohérence garantie, cycles raccourcis.</div></div>
+        <div class="faq-item"><div class="faq-question">Vous travaillez avec des petites entreprises ?</div><div class="faq-answer">Oui. On accompagne aussi bien un artisan qu'un mid-market. Ce qui compte : que le projet ait un vrai enjeu business et un décideur clair côté client. Ticket d'entrée à partir de 1 500 € pour un projet simple.</div></div>
+        <div class="faq-item"><div class="faq-question">Agence ou freelance ?</div><div class="faq-answer">Studio indépendant à taille humaine. Vous parlez directement au fondateur et aux personnes qui font. Pas de commercial qui vous vend un truc, pas de junior qui exécute derrière. Circuit court, décisions rapides.</div></div>
+        <div class="faq-item"><div class="faq-question">Quel budget minimum pour démarrer ?</div><div class="faq-answer">Landing page ou petit branding : à partir de 1 500 €. Site vitrine complet : à partir de 3 000 €. Accompagnement SEO mensuel : à partir de 800 €/mois. Sur devis pour tout le reste, retour sous 24h.</div></div>
+        <div class="faq-item"><div class="faq-question">Comment on démarre ?</div><div class="faq-answer">Vous remplissez le formulaire de devis (5 min max), on revient sous 24h avec un premier retour. Si ça matche, on cale un call de 30 min pour cadrer. Ensuite proposition détaillée sous 48h. Zéro engagement avant signature.</div></div>
+      </div>
+    </div>
+  </section>
+
   <section class="contact-band" id="contact">
     <div class="contact-tag">— Démarrer un projet marketing</div>
     <h2 class="contact-headline">Faisons<br><span class="italic">décoller.</span></h2>
@@ -250,5 +310,6 @@
   </footer>
 
   <script src="assets/js/cosmic.js" defer></script>
+  <script>document.querySelectorAll('.faq-item').forEach(i=>i.addEventListener('click',()=>i.classList.toggle('open')));</script>
 </body>
 </html>

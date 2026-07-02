@@ -1540,6 +1540,213 @@ section { position: relative; padding: 120px 60px; }
 }
 
 /* ══════════════════════════════════════════════════════════════════════
+   PHASE 2 : Chiffres clés, secteurs, équipement, FAQ univers
+══════════════════════════════════════════════════════════════════════ */
+
+/* CHIFFRES CLÉS */
+.stats-band {
+  padding: 100px 60px;
+  background: linear-gradient(180deg, #000 0%, #0a0612 100%);
+}
+.stats-band-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--ink-faint);
+  margin-top: 60px;
+}
+.stat-item {
+  background: #000;
+  padding: 56px 32px;
+  text-align: center;
+  transition: background 0.4s ease;
+}
+.stat-item:hover { background: #0a0626; }
+.stat-num {
+  font-family: var(--font-display);
+  font-size: clamp(56px, 8vw, 120px);
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+  background: linear-gradient(90deg, var(--marketing-purple) 0%, var(--marketing-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.stat-num-suffix {
+  font-size: 0.35em;
+  vertical-align: super;
+  margin-left: 4px;
+  -webkit-text-stroke: 0;
+}
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  line-height: 1.6;
+}
+.stat-item-cinema .stat-num {
+  background: linear-gradient(90deg, var(--cinema-warm) 0%, var(--cinema-cream) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* SECTEURS SERVIS */
+.sectors-band {
+  padding: 100px 60px;
+  background: #000;
+  text-align: center;
+}
+.sectors-band-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.sectors-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 50px;
+}
+.sector-tag {
+  padding: 14px 26px;
+  border: 1px solid var(--ink-faint);
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--ink);
+  transition: all 0.3s ease;
+  cursor: default;
+  line-height: 1;
+}
+.sector-tag:hover {
+  border-color: var(--marketing-cyan);
+  background: rgba(0, 224, 255, 0.06);
+  color: var(--marketing-cyan);
+}
+.sectors-band-cinema .sector-tag:hover {
+  border-color: var(--cinema-warm);
+  background: rgba(212, 197, 168, 0.06);
+  color: var(--cinema-warm);
+}
+
+/* ÉQUIPEMENT (cinema) */
+.gear-band {
+  padding: 100px 60px;
+  background: #050403;
+}
+.gear-band-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.gear-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 60px;
+}
+.gear-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--ink-faint);
+  padding: 36px 32px;
+  transition: all 0.4s var(--ease-out-expo);
+}
+.gear-card:hover {
+  border-color: rgba(212, 197, 168, 0.35);
+  background: rgba(212, 197, 168, 0.04);
+  transform: translateY(-4px);
+}
+.gear-card.gear-coming {
+  border-style: dashed;
+  opacity: 0.75;
+}
+.gear-status {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--cinema-warm);
+  margin-bottom: 18px;
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid rgba(212, 197, 168, 0.3);
+  border-radius: 3px;
+}
+.gear-coming .gear-status {
+  color: var(--marketing-cyan);
+  border-color: rgba(0, 224, 255, 0.3);
+}
+.gear-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  line-height: 1.05;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: var(--cinema-cream);
+}
+.gear-model {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--cinema-warm);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.gear-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-dim);
+  margin-bottom: 16px;
+}
+.gear-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.gear-spec {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 4px 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--ink-mute);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* FAQ UNIVERS-LEVEL (reuse .faq-list from service pages) */
+.universe-faq-band {
+  padding: 100px 60px;
+  background: linear-gradient(180deg, #0a0612 0%, #000 100%);
+}
+.universe-faq-band-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .gear-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .stats-band, .sectors-band, .gear-band, .universe-faq-band {
+    padding: 60px 24px;
+  }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .stat-item { padding: 40px 20px; }
+  .gear-grid { grid-template-columns: 1fr; }
+  .sector-tag { font-size: 14px; padding: 10px 18px; }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
    REVEAL ANIMATIONS (used by JS / IntersectionObserver)
 ══════════════════════════════════════════════════════════════════════ */
 .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo); }
