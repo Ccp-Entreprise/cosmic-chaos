@@ -80,6 +80,62 @@
       text-transform: uppercase;
     }
     .blog-empty span { display: block; font-family: var(--font-serif); font-style: italic; font-size: 36px; color: var(--marketing-purple-bright); margin-top: 24px; letter-spacing: -0.02em; text-transform: none; }
+    .blog-card {
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.4s ease;
+      cursor: pointer;
+    }
+    .blog-card:hover { background: #0a0626; }
+    .blog-card:hover .blog-card-arrow { color: var(--marketing-cyan); }
+    .blog-card-visual {
+      height: 200px;
+      overflow: hidden;
+    }
+    .blog-card-content {
+      padding: 32px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin-bottom: 20px;
+    }
+    .blog-card-cat { color: var(--marketing-cyan); }
+    .blog-card-title {
+      font-family: var(--font-display);
+      font-size: 26px;
+      line-height: 1.1;
+      letter-spacing: -0.005em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+    .blog-card-excerpt {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--ink-dim);
+      margin-bottom: 20px;
+      flex: 1;
+    }
+    .blog-card-arrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      transition: color 0.3s ease;
+    }
 
     .newsletter {
       padding: 120px 60px;
@@ -169,10 +225,35 @@
   </section>
 
   <section class="blog-grid">
-    <div class="blog-empty">
-      — Les premiers articles arrivent bientôt —
-      <span>Restez branchés.</span>
-    </div>
+    <a href="blog/prix-video-drone-2026.html" class="blog-card" data-tags="drone cinema">
+      <div class="blog-card-visual" style="background:linear-gradient(135deg,#0a0907,#050403);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:88px;color:var(--cinema-warm);opacity:0.7;">◉</div>
+      <div class="blog-card-content">
+        <div class="blog-card-meta"><span class="blog-card-cat">Cinéma / Drone</span><span class="blog-card-time">6 min</span></div>
+        <h3 class="blog-card-title">Combien coûte une vidéo drone en 2026 ?</h3>
+        <p class="blog-card-excerpt">Fourchettes de prix détaillées par cas d'usage (immobilier, événement, industrie). Ce qui fait varier les tarifs et comment reconnaître un vrai pro.</p>
+        <span class="blog-card-arrow">Lire l'article →</span>
+      </div>
+    </a>
+
+    <a href="blog/timelapse-chantier-btp-guide.html" class="blog-card" data-tags="timelapse cinema">
+      <div class="blog-card-visual" style="background:linear-gradient(135deg,#0a0626,#04020F);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:88px;color:var(--marketing-purple-bright);opacity:0.7;">▲</div>
+      <div class="blog-card-content">
+        <div class="blog-card-meta"><span class="blog-card-cat">Cinéma / Timelapse</span><span class="blog-card-time">8 min</span></div>
+        <h3 class="blog-card-title">Timelapse chantier BTP : le guide complet</h3>
+        <p class="blog-card-excerpt">Pourquoi installer un timelapse, combien ça coûte, quelle installation prévoir, quels livrables attendre. Guide de référence pour promoteurs et BTP.</p>
+        <span class="blog-card-arrow">Lire l'article →</span>
+      </div>
+    </a>
+
+    <a href="blog/seo-local-paca.html" class="blog-card" data-tags="seo marketing">
+      <div class="blog-card-visual" style="background:linear-gradient(135deg,#04020F,#0a0626);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:88px;color:var(--marketing-cyan);opacity:0.7;">⬢</div>
+      <div class="blog-card-content">
+        <div class="blog-card-meta"><span class="blog-card-cat">Marketing / SEO</span><span class="blog-card-time">7 min</span></div>
+        <h3 class="blog-card-title">SEO local en PACA : comment se positionner</h3>
+        <p class="blog-card-excerpt">Guide complet pour arriver en top 3 Google Maps. Google Business Profile, avis, netlinking local, délais et coûts. Pour commerçants et artisans.</p>
+        <span class="blog-card-arrow">Lire l'article →</span>
+      </div>
+    </a>
   </section>
 
   <section class="newsletter">
