@@ -111,8 +111,13 @@ button { font: inherit; background: none; border: none; color: inherit; cursor: 
 }
 .nav-logo-mark {
   height: 44px;
-  width: auto;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+  width: 44px;
+  border-radius: 10px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
+  transition: transform 0.3s var(--ease-out-expo);
+}
+.nav-logo:hover .nav-logo-mark {
+  transform: scale(1.05) rotate(-3deg);
 }
 .nav-logo-text {
   font-family: var(--font-display);
