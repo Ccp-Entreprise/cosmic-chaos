@@ -110,9 +110,9 @@ button { font: inherit; background: none; border: none; color: inherit; cursor: 
   gap: 12px;
 }
 .nav-logo-mark {
-  height: 36px;
+  height: 44px;
   width: auto;
-  filter: invert(1) brightness(1.2);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
 }
 .nav-logo-text {
   font-family: var(--font-display);
